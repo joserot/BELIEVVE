@@ -18,16 +18,16 @@ const links = [
 
 const socialLinks = [
 	{
-		href: "/https://www.facebook.com/",
+		href: "https://www.facebook.com/",
 		label: "Facebook",
 	},
 	{
-		href: "/https://www.instagram.com/",
+		href: "https://www.instagram.com/",
 		label: "Instagram",
 	},
 	{
-		href: "/https://www.whatsapp.com/",
-		label: "WhatsApp.",
+		href: "https://www.whatsapp.com/",
+		label: "WhatsApp",
 	},
 ];
 
@@ -35,10 +35,10 @@ export default function Header() {
 	return (
 		<header className={styles.header}>
 			<div className={styles.headerContainer}>
-				<Link href="/">
+				<Link className={styles.logo} href="/">
 					<span>Logo</span>
 				</Link>
-				<nav>
+				<nav className={styles.navbar}>
 					{links.map(({ href, label }) => {
 						return (
 							<Link key={label} href={href}>
@@ -47,12 +47,12 @@ export default function Header() {
 						);
 					})}
 				</nav>
-				<div>
+				<div className={styles.socialLinks}>
 					{socialLinks.map(({ href, label }) => {
 						return (
-							<Link key={href} href={href} target="_blank">
+							<a key={href} href={href} target="_blank">
 								{label}
-							</Link>
+							</a>
 						);
 					})}
 				</div>

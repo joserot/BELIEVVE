@@ -1,12 +1,13 @@
 .header {
 	width: 100%;
 	background-color: #fff;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 20px;
 }
 
 .headerContainer {
@@ -15,4 +16,36 @@
 	align-items: center;
 	width: 100%;
 	max-width: 1200px;
+}
+
+.logo {
+	text-decoration: none;
+	color: #000;
+	font-size: 1rem;
+}
+
+.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1rem;
+}
+
+.socialLinks {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.socialLinks a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1rem;
 }
