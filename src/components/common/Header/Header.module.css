@@ -1,0 +1,18 @@
+.header {
+	width: 100%;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+}
