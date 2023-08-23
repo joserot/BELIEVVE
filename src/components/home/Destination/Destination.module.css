@@ -1,0 +1,86 @@
+.destination {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: #6db3f2;
+	padding: 150px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.col1 {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.imagesContainer {
+	width: 100%;
+	position: relative;
+}
+
+.image1 {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+}
+
+.image2 {
+	position: absolute;
+	top: -15%;
+	right: -15%;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.col2 {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.col2 h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.col2 p {
+	font-size: 2rem;
+	text-wrap: balance;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.col2 button {
+	padding: 20px;
+	border: none;
+	background-color: #8b3dff;
+	color: #000;
+	font-size: 1.5rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+}
+
+.col2 button:hover {
+	background-color: #8130fc;
+}
