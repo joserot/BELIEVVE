@@ -1,12 +1,15 @@
 import styles from "./Destination.module.css";
 import Image from "next/image";
 
+type type = "left" | "right";
+
 interface Props {
 	name: string;
 	description: string;
 	imagePrimary: string;
 	imageSecondary: string;
 	imageTertiary: string;
+	type?: type;
 }
 
 export default function Destination({
@@ -15,6 +18,7 @@ export default function Destination({
 	imagePrimary,
 	imageSecondary,
 	imageTertiary,
+	type = "right",
 }: Props) {
 	return (
 		<article
@@ -23,7 +27,11 @@ export default function Destination({
 			}}
 			className={styles.destination}
 		>
-			<div className={styles.container}>
+			<div
+				className={
+					type === "right" ? styles.containerRight : styles.containerLeft
+				}
+			>
 				<section className={styles.col1}>
 					<div className={styles.imagesContainer}>
 						<Image
@@ -34,7 +42,9 @@ export default function Destination({
 							height={500}
 						/>
 						<Image
-							className={styles.image2}
+							className={
+								type === "right" ? styles.image2Right : styles.image2Left
+							}
 							src={imageTertiary}
 							alt={name}
 							width={400}

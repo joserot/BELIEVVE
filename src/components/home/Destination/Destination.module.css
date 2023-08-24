@@ -10,10 +10,19 @@
 	gap: 40px;
 }
 
-.container {
+.containerRight {
 	width: 100%;
 	max-width: 1200px;
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.containerLeft {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: row-reverse;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -37,10 +46,20 @@
 	object-fit: cover;
 }
 
-.image2 {
+.image2Right {
 	position: absolute;
 	top: -15%;
 	right: -15%;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.image2Left {
+	position: absolute;
+	bottom: -15%;
+	left: -15%;
 	border-radius: 50%;
 	width: 200px;
 	height: 200px;

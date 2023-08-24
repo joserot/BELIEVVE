@@ -27,6 +27,23 @@ export default function Home() {
 				imagePrimary={orlando.imagePrimary}
 				imageSecondary={orlando.imageSecondary}
 				imageTertiary={orlando.imageTertiary}
+				type="right"
+			/>
+			<Destination
+				name={orlando.name}
+				description={orlando.description}
+				imagePrimary={orlando.imagePrimary}
+				imageSecondary={orlando.imageSecondary}
+				imageTertiary={orlando.imageTertiary}
+				type="left"
+			/>
+			<Destination
+				name={orlando.name}
+				description={orlando.description}
+				imagePrimary={orlando.imagePrimary}
+				imageSecondary={orlando.imageSecondary}
+				imageTertiary={orlando.imageTertiary}
+				type="right"
 			/>
 		</main>
 	);

@@ -1,5 +1,8 @@
 import styles from "./Header.module.css";
 import Link from "next/link";
+import FacebookIcon from "../icons/Facebook";
+import InstagramIcon from "../icons/Instagram";
+import WhatsAppIcon from "../icons/WhatsApp";
 
 const links = [
 	{
@@ -20,14 +23,17 @@ const socialLinks = [
 	{
 		href: "https://www.facebook.com/",
 		label: "Facebook",
+		icon: <FacebookIcon />,
 	},
 	{
 		href: "https://www.instagram.com/",
 		label: "Instagram",
+		icon: <InstagramIcon />,
 	},
 	{
 		href: "https://www.whatsapp.com/",
 		label: "WhatsApp",
+		icon: <WhatsAppIcon />,
 	},
 ];
 
@@ -48,14 +54,14 @@ export default function Header() {
 					})}
 				</nav>
 				<div className={styles.socialLinks}>
-					{socialLinks.map(({ href, label }) => {
+					{socialLinks.map(({ href, icon }) => {
 						return (
 							<a key={href} href={href} target="_blank">
-								{label}
+								{icon}
 							</a>
 						);
 					})}
-					<span>+14077575376</span>
+					<span className={styles.phone}>+14077575376</span>
 				</div>
 			</div>
 		</header>
