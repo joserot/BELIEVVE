@@ -43,7 +43,11 @@ const testimonials = [
 
 export default function Home() {
 	return (
-		<main>
+		<main
+			style={{
+				position: "relative",
+			}}
+		>
 			<Header />
 			<HeroHome />
 			<Information />

@@ -51,3 +51,22 @@
 	font-weight: 600;
 	text-transform: uppercase;
 }
+
+.testimonialText {
+	position: relative;
+	padding: 35px 0;
+}
+
+.quote2 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.1;
+}
+
+.quote1 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	opacity: 0.1;
+}
