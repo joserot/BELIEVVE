@@ -1,72 +1,226 @@
-.testimonials {
-	padding: 50px 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
+/* MOBILE */
+@media screen and (max-width: 700px) {
+	.testimonials {
+		padding: 50px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.testimonial {
+		width: 100%;
+		background-color: #7a7a7a1a;
+		border-radius: 10px;
+		padding: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 20px;
+	}
+
+	.col1 {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+
+	.image {
+		border-radius: 50%;
+		object-fit: cover;
+		width: 50px;
+		height: 50px;
+	}
+
+	.col2 {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.description {
+		font-size: 1rem;
+		color: #7a7a7a;
+	}
+
+	.name {
+		font-size: 0.7rem;
+		color: #000;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.testimonialText {
+		position: relative;
+		padding: 20px 0;
+	}
+
+	.quote2 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0.1;
+	}
+
+	.quote1 {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		opacity: 0.1;
+	}
 }
 
-.testimonial {
-	width: 100%;
-	background-color: #7a7a7a1a;
-	border-radius: 10px;
-	padding: 35px;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	gap: 20px;
+/* TABLET */
+@media screen and (max-width: 1024px) and (min-width: 700px) {
+	.testimonials {
+		padding: 100px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.testimonial {
+		width: 100%;
+		background-color: #7a7a7a1a;
+		border-radius: 10px;
+		padding: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 20px;
+	}
+
+	.col1 {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+
+	.image {
+		border-radius: 50%;
+		object-fit: cover;
+		width: 100px;
+		height: 100px;
+	}
+
+	.col2 {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.description {
+		font-size: 1rem;
+		color: #7a7a7a;
+	}
+
+	.name {
+		font-size: 0.7rem;
+		color: #000;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.testimonialText {
+		position: relative;
+		padding: 20px 0;
+	}
+
+	.quote2 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0.1;
+	}
+
+	.quote1 {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		opacity: 0.1;
+	}
 }
 
-.col1 {
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-start;
-}
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+	.testimonials {
+		padding: 100px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
 
-.image {
-	border-radius: 50%;
-	object-fit: cover;
-	width: 100px;
-	height: 100px;
-}
+	.testimonial {
+		width: 100%;
+		background-color: #7a7a7a1a;
+		border-radius: 10px;
+		padding: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 20px;
+	}
 
-.col2 {
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-direction: column;
-	gap: 20px;
-}
+	.col1 {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
 
-.description {
-	font-size: 1.5rem;
-	color: #7a7a7a;
-}
+	.image {
+		border-radius: 50%;
+		object-fit: cover;
+		width: 100px;
+		height: 100px;
+	}
 
-.name {
-	font-size: 1rem;
-	color: #000;
-	font-weight: 600;
-	text-transform: uppercase;
-}
+	.col2 {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 20px;
+	}
 
-.testimonialText {
-	position: relative;
-	padding: 35px 0;
-}
+	.description {
+		font-size: 1.5rem;
+		color: #7a7a7a;
+	}
 
-.quote2 {
-	position: absolute;
-	left: 0;
-	top: 0;
-	opacity: 0.1;
-}
+	.name {
+		font-size: 1rem;
+		color: #000;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
 
-.quote1 {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	opacity: 0.1;
+	.testimonialText {
+		position: relative;
+		padding: 35px 0;
+	}
+
+	.quote2 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0.1;
+	}
+
+	.quote1 {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		opacity: 0.1;
+	}
 }
