@@ -1,16 +1,6 @@
 import styles from "./Destination.module.css";
 import Image from "next/image";
-
-type type = "left" | "right";
-
-interface Props {
-	name: string;
-	description: string;
-	imagePrimary: string;
-	imageSecondary: string;
-	imageTertiary: string;
-	type?: type;
-}
+import Link from "next/link";
 
 export default function Destination({
 	name,
@@ -18,8 +8,9 @@ export default function Destination({
 	imagePrimary,
 	imageSecondary,
 	imageTertiary,
+	id,
 	type = "right",
-}: Props) {
+}: Destination) {
 	return (
 		<article
 			style={{
@@ -55,7 +46,7 @@ export default function Destination({
 				<section className={styles.col2}>
 					<h2>{name}</h2>
 					<p>{description}</p>
-					<button>{name + " resorts"}</button>
+					<Link href={`/destinations/${id}`}>{name + " resorts"}</Link>
 				</section>
 			</div>
 		</article>
