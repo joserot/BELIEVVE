@@ -3,6 +3,7 @@
 import styles from "./Hotel.module.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
+import "@splidejs/splide/css";
 import Image from "next/image";
 
 interface orientation {
@@ -39,6 +40,7 @@ export default function Hotel({
 								arrows: true,
 								paginationKeyboard: true,
 								width: "100%",
+								height: "500px",
 								lazyLoad: true,
 							}}
 							aria-label="Images"
@@ -51,7 +53,7 @@ export default function Hotel({
 											src={image}
 											alt={"Hotel"}
 											width={700}
-											height={700}
+											height={500}
 										/>
 									</SplideSlide>
 								);
@@ -59,7 +61,9 @@ export default function Hotel({
 						</Splide>
 					</div>
 				) : null}
-				<p>{description}</p>
+				<div className={styles.description}>
+					<p>{description}</p>
+				</div>
 			</section>
 			<button className={styles.moreInformation}>MORE INFORMATION</button>
 		</article>

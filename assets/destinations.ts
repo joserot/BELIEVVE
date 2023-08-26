@@ -3,7 +3,7 @@ const destinations: Destination[] = [
 		name: "Orlando",
 		description: "Family Fun in the Heart of the Parks",
 		longDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lectus at purus placerat pretium. Nulla vulputate, ex a interdum malesuada, felis tortor fermentum urna, a lobortis libero est finibus tellus. Donec lacus odio, lacinia sed velit at, finibus facilisis enim. Proin elementum sodales consequat. ",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis finibus facilisis enim. Proin elementum sodales consequat. ",
 		imagePrimary:
 			"https://images.unsplash.com/photo-1618945373370-7bde4f8dd9c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80",
 		imageSecondary:
@@ -17,7 +17,7 @@ const destinations: Destination[] = [
 		name: "LAS VEGAS",
 		description: "what happens in vegas stays in vegas",
 		longDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lectus at purus placerat pretium. Nulla vulputate, ex a interdum malesuada, felis tortor fermentum urna, a lobortis libero est finibus tellus. Donec lacus odio, lacinia sed velit at, finibus facilisis enim. Proin elementum sodales consequat. ",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis quat. ",
 		imagePrimary:
 			"https://images.unsplash.com/photo-1581351721010-8cf859cb14a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
 		imageSecondary:
@@ -31,7 +31,7 @@ const destinations: Destination[] = [
 		name: "BRANSON",
 		description: "The Live Entertainment Capital of the World!",
 		longDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lectus at purus placerat pretium. Nulla vulputate, ex a interdum malesuada, felis tortor fermentum urna, a lobortis libero est finibus tellus. Donec lacus odio, lacinia sed velit at, finibus facilisis enim. Proin elementum sodales consequat. ",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lectus at purus placerat pretium. Nulla vulputate, ex a interdum  ",
 		imagePrimary:
 			"https://images.unsplash.com/photo-1560651471-d7fca5abfd5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
 		imageSecondary:
