@@ -9,6 +9,7 @@ export default function Destination({
 	imageSecondary,
 	imageTertiary,
 	id,
+	hotels,
 	type = "right",
 }: Destination) {
 	return (

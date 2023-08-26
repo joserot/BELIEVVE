@@ -29,6 +29,7 @@ export default function Home() {
 						imageSecondary={destination.imageSecondary}
 						imageTertiary={destination.imageTertiary}
 						id={destination.id}
+						hotels={destination.hotels}
 						type={type}
 					/>
 				);
