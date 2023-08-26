@@ -109,8 +109,9 @@
 		padding: 20px;
 		border: none;
 		background-color: #5861fd;
-		color: #000;
+		color: #fff;
 		font-size: 1rem;
+		font-weight: 500;
 		cursor: pointer;
 		text-transform: uppercase;
 		transition: background-color 0.3s;
@@ -228,7 +229,8 @@
 		padding: 20px;
 		border: none;
 		background-color: #5861fd;
-		color: #000;
+		color: #fff;
+		font-weight: 500;
 		font-size: 1rem;
 		cursor: pointer;
 		text-transform: uppercase;

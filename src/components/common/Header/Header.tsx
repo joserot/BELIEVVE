@@ -1,8 +1,14 @@
+"use client";
+
 import styles from "./Header.module.css";
 import Link from "next/link";
 import FacebookIcon from "../icons/Facebook";
 import InstagramIcon from "../icons/Instagram";
 import WhatsAppIcon from "../icons/WhatsApp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import NavBar from "./NavBar/NavBar";
 
 const links = [
 	{
@@ -38,6 +44,14 @@ const socialLinks = [
 ];
 
 export default function Header() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const handleMenuClick = (event: React.SyntheticEvent<HTMLButtonElement>) => {
+		event.preventDefault();
+
+		setIsMenuOpen(!isMenuOpen);
+	};
+
 	return (
 		<header className={styles.header}>
 			<div className={styles.headerContainer}>
@@ -63,7 +77,18 @@ export default function Header() {
 					})}
 					<span className={styles.phone}>+14077575376</span>
 				</div>
+				<button onClick={handleMenuClick} className={styles.burgerMenu}>
+					<FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
+				</button>
 			</div>
+			{isMenuOpen && (
+				<NavBar
+					links={links}
+					socialLinks={socialLinks}
+					handleMenuClick={handleMenuClick}
+					isMenuOpen={isMenuOpen}
+				/>
+			)}
 		</header>
 	);
 }

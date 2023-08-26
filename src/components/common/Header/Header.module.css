@@ -55,6 +55,19 @@
 		color: #5861fd;
 		font-weight: 600;
 	}
+
+	.burgerMenu {
+		background-color: transparent;
+		color: #000;
+		border: none;
+		width: 20px;
+		height: 20px;
+	}
+
+	.burgerMenu svg {
+		width: 100%;
+		height: auto;
+	}
 }
 
 /* TABLET */
@@ -113,6 +126,27 @@
 	.phone {
 		color: #5861fd;
 		font-weight: 600;
+	}
+
+	.burgerMenu {
+		background-color: transparent;
+		color: #000;
+		border: none;
+		width: 30px;
+		height: 30px;
+	}
+
+	.burgerMenu {
+		background-color: transparent;
+		color: #000;
+		border: none;
+		width: 20px;
+		height: 20px;
+	}
+
+	.burgerMenu svg {
+		width: 100%;
+		height: auto;
 	}
 }
 
@@ -188,5 +222,9 @@
 	.phone {
 		color: #5861fd;
 		font-weight: 600;
+	}
+
+	.burgerMenu {
+		display: none;
 	}
 }
