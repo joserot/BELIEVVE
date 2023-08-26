@@ -1,8 +1,7 @@
 /* MOBILE */
 @media screen and (max-width: 700px) {
 	.hero {
-		background-image: linear-gradient(to right, #0000005e, #0000005e),
-			url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+		background-image: linear-gradient(to right, #0000005e, #0000005e);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -12,6 +11,17 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		position: relative;
+	}
+
+	.heroImage {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
 	}
 
 	.hero h1 {
@@ -31,8 +41,7 @@
 /* TABLET */
 @media screen and (max-width: 1024px) and (min-width: 700px) {
 	.hero {
-		background-image: linear-gradient(to right, #0000005e, #0000005e),
-			url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+		background-image: linear-gradient(to right, #0000005e, #0000005e);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -42,6 +51,17 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		position: relative;
+	}
+
+	.heroImage {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
 	}
 
 	.hero h1 {
@@ -60,8 +80,7 @@
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
 	.hero {
-		background-image: linear-gradient(to right, #0000005e, #0000005e),
-			url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+		background-image: linear-gradient(to right, #0000005e, #0000005e);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -71,6 +90,17 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		position: relative;
+	}
+
+	.heroImage {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
 	}
 
 	.hero h1 {

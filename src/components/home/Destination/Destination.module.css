@@ -9,6 +9,18 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background: linear-gradient(to right, #ffffff9e, #ffffff9e);
+		position: relative;
+	}
+
+	.imagePrimary {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
 	}
 
 	.containerRight {
@@ -118,6 +130,18 @@
 		justify-content: center;
 		align-items: center;
 		gap: 40px;
+		background: linear-gradient(to right, #ffffff9e, #ffffff9e);
+		position: relative;
+	}
+
+	.imagePrimary {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
 	}
 
 	.containerRight {
@@ -225,6 +249,18 @@
 		justify-content: center;
 		align-items: center;
 		gap: 40px;
+		background: linear-gradient(to right, #ffffff9e, #ffffff9e);
+		position: relative;
+	}
+
+	.imagePrimary {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
 	}
 
 	.containerRight {

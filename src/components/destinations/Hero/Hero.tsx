@@ -19,11 +19,7 @@ export default function Hero({ destinations }: Props) {
 			<div className={styles.heroContainer}>
 				<h1>{destination.name}</h1>
 				<h2>Resorts</h2>
-				<p>
-					Orlando is a city that evokes images of fun, excitement, and
-					entertainment, with a strong focus on family experiences and
-					attractions.
-				</p>
+				{destination.longDescription && <p>{destination.longDescription}</p>}
 			</div>
 		</article>
 	);

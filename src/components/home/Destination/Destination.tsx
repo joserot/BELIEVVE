@@ -12,12 +12,14 @@ export default function Destination({
 	type = "right",
 }: Destination) {
 	return (
-		<article
-			style={{
-				backgroundImage: `linear-gradient(to right, #ffffff9e, #ffffff9e),  url(${imagePrimary})`,
-			}}
-			className={styles.destination}
-		>
+		<article className={styles.destination}>
+			<Image
+				className={styles.imagePrimary}
+				src={imagePrimary}
+				alt={name}
+				width={1920}
+				height={700}
+			/>
 			<div
 				className={
 					type === "right" ? styles.containerRight : styles.containerLeft
