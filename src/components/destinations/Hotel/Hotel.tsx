@@ -52,8 +52,8 @@ export default function Hotel({
 											className={styles.image}
 											src={image}
 											alt={"Hotel"}
-											width={700}
-											height={500}
+											width={300}
+											height={300}
 										/>
 									</SplideSlide>
 								);

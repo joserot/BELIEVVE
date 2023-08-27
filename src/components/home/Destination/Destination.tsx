@@ -18,8 +18,8 @@ export default function Destination({
 				className={styles.imagePrimary}
 				src={imagePrimary}
 				alt={name}
-				width={1920}
-				height={700}
+				width={1000}
+				height={500}
 			/>
 			<div
 				className={
@@ -32,8 +32,8 @@ export default function Destination({
 							className={styles.image1}
 							src={imageSecondary}
 							alt={name}
-							width={500}
-							height={500}
+							width={300}
+							height={300}
 						/>
 						<Image
 							className={
@@ -41,8 +41,8 @@ export default function Destination({
 							}
 							src={imageTertiary}
 							alt={name}
-							width={400}
-							height={400}
+							width={200}
+							height={200}
 						/>
 					</div>
 				</section>

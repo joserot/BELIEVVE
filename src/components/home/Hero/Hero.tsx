@@ -9,8 +9,8 @@ export default function HeroHome() {
 					"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
 				}
 				alt="Believve"
-				width={1920}
-				height={700}
+				width={1000}
+				height={500}
 				className={styles.heroImage}
 			/>
 			<h1>BELIEVVE LIVVE & LOVVE IT! </h1>

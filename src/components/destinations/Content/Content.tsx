@@ -33,7 +33,9 @@ export default function Content({ destinations }: Props) {
 					);
 				})
 			) : (
-				<p>No hotels found</p>
+				<div className={styles.noHotels}>
+					<p>No hotels found :(</p>
+				</div>
 			)}
 		</article>
 	);

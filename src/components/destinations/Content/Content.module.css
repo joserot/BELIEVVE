@@ -1,9 +1,22 @@
 .content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	width: 90%;
 	max-width: 1200px;
+	min-height: 80vh;
 	margin: 0 auto;
+}
+
+.noHotels {
+	padding: 50px 0;
+}
+
+.noHotels p {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	color: #7a7a7a;
+	font-weight: 500;
 }
