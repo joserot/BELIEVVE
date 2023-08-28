@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import NavBar from "./NavBar/NavBar";
+import Image from "next/image";
 
 const links = [
 	{
@@ -56,7 +57,7 @@ export default function Header() {
 		<header className={styles.header}>
 			<div className={styles.headerContainer}>
 				<Link className={styles.logo} href="/">
-					<span>Logo</span>
+					<Image src="/img/logo.png" alt="logo" width={150} height={50} />
 				</Link>
 				<nav className={styles.navbar}>
 					{links.map(({ href, label }) => {
