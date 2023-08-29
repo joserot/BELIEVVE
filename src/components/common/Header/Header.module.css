@@ -26,9 +26,9 @@
 	}
 
 	.logo img {
-		width: 150px;
+		width: 100px;
 		height: 100%;
-		object-fit: cover;
+		object-fit: contain;
 	}
 	.navbar {
 		display: none;
