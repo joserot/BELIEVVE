@@ -28,17 +28,17 @@ const links = [
 
 const socialLinks = [
 	{
-		href: "https://www.facebook.com/",
+		href: "https://www.facebook.com/vvoutlet.travelnow",
 		label: "Facebook",
 		icon: <FacebookIcon />,
 	},
 	{
-		href: "https://www.instagram.com/",
+		href: "https://www.instagram.com/vvoutlet.travelnow/",
 		label: "Instagram",
 		icon: <InstagramIcon />,
 	},
 	{
-		href: "https://www.whatsapp.com/",
+		href: "https://api.whatsapp.com/send/?phone=14077575376",
 		label: "WhatsApp",
 		icon: <WhatsAppIcon />,
 	},
@@ -71,12 +71,19 @@ export default function Header() {
 				<div className={styles.socialLinks}>
 					{socialLinks.map(({ href, icon }) => {
 						return (
-							<a key={href} href={href} target="_blank">
+							<a
+								className={styles.social}
+								key={href}
+								href={href}
+								target="_blank"
+							>
 								{icon}
 							</a>
 						);
 					})}
-					<span className={styles.phone}>+14077575376</span>
+					<a href="tel:+14077575376" target="_blank" className={styles.phone}>
+						+14077575376
+					</a>
 				</div>
 				<button onClick={handleMenuClick} className={styles.burgerMenu}>
 					<FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />

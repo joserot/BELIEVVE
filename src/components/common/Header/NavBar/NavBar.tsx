@@ -44,13 +44,15 @@ export default function NavBar({
 			<section className={styles.socialLinks}>
 				{socialLinks.map(({ href, icon }) => {
 					return (
-						<a key={href} href={href} target="_blank">
+						<a key={href} href={href} target="_blank" className={styles.social}>
 							{icon}
 						</a>
 					);
 				})}
 			</section>
-			<span className={styles.phone}>+14077575376</span>
+			<a href="tel:+14077575376" target="_blank" className={styles.phone}>
+				+14077575376
+			</a>
 		</nav>
 	);
 }

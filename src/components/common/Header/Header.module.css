@@ -34,30 +34,8 @@
 		display: none;
 	}
 
-	.navbar a {
-		text-decoration: none;
-		color: #000;
-		font-size: 1rem;
-		font-weight: 600;
-	}
-
 	.socialLinks {
 		display: none;
-	}
-
-	.socialLinks a {
-		text-decoration: none;
-		color: #000;
-	}
-
-	.socialLinks svg {
-		width: 25px;
-		height: auto;
-	}
-
-	.phone {
-		color: #5861fd;
-		font-weight: 600;
 	}
 
 	.burgerMenu {
@@ -109,30 +87,8 @@
 		display: none;
 	}
 
-	.navbar a {
-		text-decoration: none;
-		color: #000;
-		font-size: 1rem;
-		font-weight: 600;
-	}
-
 	.socialLinks {
 		display: none;
-	}
-
-	.socialLinks a {
-		text-decoration: none;
-		color: #000;
-	}
-
-	.socialLinks svg {
-		width: 25px;
-		height: auto;
-	}
-
-	.phone {
-		color: #5861fd;
-		font-weight: 600;
 	}
 
 	.burgerMenu {
@@ -215,13 +171,13 @@
 		gap: 1rem;
 	}
 
-	.socialLinks a {
+	.socialLinks .social {
 		text-decoration: none;
 		color: #000;
 		transition: transform 0.5s;
 	}
 
-	.socialLinks a:hover {
+	.socialLinks .social:hover {
 		transform: translateY(-5px);
 	}
 
@@ -233,6 +189,7 @@
 	.phone {
 		color: #5861fd;
 		font-weight: 600;
+		text-decoration: none;
 	}
 
 	.burgerMenu {
