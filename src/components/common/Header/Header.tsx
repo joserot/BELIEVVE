@@ -5,6 +5,7 @@ import Link from "next/link";
 import FacebookIcon from "../icons/Facebook";
 import InstagramIcon from "../icons/Instagram";
 import WhatsAppIcon from "../icons/WhatsApp";
+import TikTokIcon from "../icons/TikTok";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
@@ -36,6 +37,11 @@ const socialLinks = [
 		href: "https://www.instagram.com/vvoutlet.travelnow/",
 		label: "Instagram",
 		icon: <InstagramIcon />,
+	},
+	{
+		href: "https://www.tiktok.com/@vvoutlet",
+		label: "TikTok",
+		icon: <TikTokIcon />,
 	},
 	{
 		href: "https://api.whatsapp.com/send/?phone=14077575376",

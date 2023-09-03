@@ -182,8 +182,9 @@
 	}
 
 	.socialLinks svg {
-		width: 35px;
+		width: 30px;
 		height: auto;
+		object-fit: contain;
 	}
 
 	.phone {
