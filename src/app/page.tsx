@@ -7,6 +7,7 @@ import Testimonials from "<src>/components/home/Testimonials/Testimonials";
 import Footer from "<src>/components/common/Footer/Footer";
 import destinations from "../../assets/destinations";
 import testimonials from "../../assets/testimonials";
+import WhatsAppButton from "<src>/components/common/WhatsAppButton/WhatsAppButton";
 
 export default function Home() {
 	return (
@@ -35,6 +36,7 @@ export default function Home() {
 				);
 			})}
 			<Testimonials testimonials={testimonials} />
+			<WhatsAppButton />
 			<Footer />
 		</main>
 	);
