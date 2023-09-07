@@ -5,19 +5,31 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import Image from "next/image";
 
-type testimonial = {
+type image = {
+	fields: {
+		file: {
+			url: string;
+		};
+	};
+};
+
+type fields = {
 	name: string;
-	description: string;
-	image: string;
+	testimonial: string;
+	profilePhoto: image;
+};
+
+type testimonial = {
+	fields: fields;
 };
 
 interface Props {
 	testimonials: testimonial[];
 }
 
-const splideOptions = {};
-
 export default function Testimonials({ testimonials }: Props) {
+	if (!testimonials) return null;
+
 	return (
 		<article className={styles.testimonials}>
 			<Splide
@@ -38,13 +50,13 @@ export default function Testimonials({ testimonials }: Props) {
 			>
 				{testimonials.map((testimonial) => {
 					return (
-						<SplideSlide key={testimonial.name}>
+						<SplideSlide key={testimonial.fields.name}>
 							<section className={styles.testimonial}>
 								<div className={styles.col1}>
 									<Image
 										className={styles.image}
-										src={testimonial.image}
-										alt={testimonial.name}
+										src={`https:${testimonial.fields.profilePhoto.fields.file.url}`}
+										alt={testimonial.fields.name}
 										width={100}
 										height={100}
 									/>
@@ -52,7 +64,7 @@ export default function Testimonials({ testimonials }: Props) {
 								<div className={styles.col2}>
 									<div className={styles.testimonialText}>
 										<p className={styles.description}>
-											{testimonial.description}
+											{testimonial.fields.testimonial}
 										</p>
 										<Image
 											className={styles.quote1}
@@ -69,7 +81,7 @@ export default function Testimonials({ testimonials }: Props) {
 											alt="quote"
 										/>
 									</div>
-									<h3 className={styles.name}>{testimonial.name}</h3>
+									<h3 className={styles.name}>{testimonial.fields.name}</h3>
 								</div>
 							</section>
 						</SplideSlide>

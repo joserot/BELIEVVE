@@ -6,10 +6,18 @@ import Destination from "<src>/components/home/Destination/Destination";
 import Testimonials from "<src>/components/home/Testimonials/Testimonials";
 import Footer from "<src>/components/common/Footer/Footer";
 import destinations from "../../assets/destinations";
-import testimonials from "../../assets/testimonials";
 import WhatsAppButton from "<src>/components/common/WhatsAppButton/WhatsAppButton";
+import { client } from "<src>/lib/contentful";
 
-export default function Home() {
+async function getData() {
+	const response = await client.getEntries({ content_type: "testimonials" });
+
+	return response;
+}
+
+export default async function Home() {
+	const testimonials = await getData();
+
 	return (
 		<main
 			style={{
@@ -35,7 +43,7 @@ export default function Home() {
 					/>
 				);
 			})}
-			<Testimonials testimonials={testimonials} />
+			<Testimonials testimonials={testimonials.items} />
 			<WhatsAppButton />
 			<Footer />
 		</main>
