@@ -6,6 +6,7 @@ import FacebookIcon from "../icons/Facebook";
 import InstagramIcon from "../icons/Instagram";
 import WhatsAppIcon from "../icons/WhatsApp";
 import TikTokIcon from "../icons/TikTok";
+import AirbnbIcon from "../icons/Airbnb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
@@ -39,9 +40,14 @@ const socialLinks = [
 		icon: <InstagramIcon />,
 	},
 	{
-		href: "https://www.tiktok.com/@vvoutlet",
+		href: "https://www.tiktok.com/@vvoutlet.travelnow",
 		label: "TikTok",
 		icon: <TikTokIcon />,
+	},
+	{
+		href: "https://www.airbnb.com/users/show/58007933",
+		label: "Airbnb",
+		icon: <AirbnbIcon />,
 	},
 	{
 		href: "https://api.whatsapp.com/send/?phone=14077575376",

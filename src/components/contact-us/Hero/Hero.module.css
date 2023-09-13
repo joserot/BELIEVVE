@@ -1,0 +1,48 @@
+.hero {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.hero h1 {
+	color: #02b6de;
+	font-size: 3rem;
+	font-weight: 700;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.hero h2 {
+	color: #000;
+	font-weight: 500;
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.hero p {
+	color: #000;
+	font-weight: 400;
+	margin: 0;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.hero ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.hero li {
+	color: #000;
+	font-weight: 400;
+	margin: 0;
+	font-size: 1.5rem;
+}

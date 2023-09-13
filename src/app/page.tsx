@@ -3,6 +3,7 @@ import Header from "<src>/components/common/Header/Header";
 import HeroHome from "<src>/components/home/Hero/Hero";
 import Information from "<src>/components/home/Information/Information";
 import Destination from "<src>/components/home/Destination/Destination";
+import About from "<src>/components/home/About/About";
 import Testimonials from "<src>/components/home/Testimonials/Testimonials";
 import Footer from "<src>/components/common/Footer/Footer";
 import destinations from "../../assets/destinations";
@@ -43,6 +44,7 @@ export default async function Home() {
 					/>
 				);
 			})}
+			<About />
 			<Testimonials testimonials={testimonials.items} />
 			<WhatsAppButton />
 			<Footer />
