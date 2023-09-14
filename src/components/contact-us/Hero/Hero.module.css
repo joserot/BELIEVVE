@@ -1,48 +1,62 @@
 .hero {
-	width: 90%;
-	max-width: 1200px;
-	display: flex;
-	flex-direction: column;
-	margin: 0 auto;
-	padding: 50px 0;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
 .hero h1 {
-	color: #02b6de;
-	font-size: 3rem;
-	font-weight: 700;
-	margin: 0;
-	margin-bottom: 20px;
+  color: #02b6de;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .hero h2 {
-	color: #000;
-	font-weight: 500;
-	margin: 0;
-	margin-bottom: 20px;
-	font-size: 2rem;
-	text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .hero p {
-	color: #000;
-	font-weight: 400;
-	margin: 0;
-	font-size: 1.5rem;
-	margin-bottom: 10px;
+  color: #000;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .hero ul {
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 30px;
 }
 
 .hero li {
-	color: #000;
-	font-weight: 400;
-	margin: 0;
-	font-size: 1.5rem;
+  color: #000;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero li {
+    font-size: 1rem;
+  }
 }
