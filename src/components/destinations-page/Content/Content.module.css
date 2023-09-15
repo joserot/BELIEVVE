@@ -1,0 +1,41 @@
+.content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2rem;
+  color: #04d1f7;
+}
+
+.cardsContainer {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 30px 0;
+  gap: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .content {
+    padding: 30px 0;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+}
