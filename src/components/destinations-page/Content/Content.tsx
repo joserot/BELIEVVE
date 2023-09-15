@@ -5,7 +5,7 @@ import styles from "./Content.module.css";
 export default function Content() {
   return (
     <article className={styles.content}>
-      <h1>LOCATIONS</h1>;
+      <h1>LOCATIONS</h1>
       <div className={styles.cardsContainer}>
         {destinations.map(
           ({
