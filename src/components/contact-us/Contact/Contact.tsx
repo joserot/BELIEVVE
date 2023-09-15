@@ -21,13 +21,21 @@ export default function Contact() {
 
       <div className={styles.container}>
         <div className={show ? styles.linksOpen : styles.linksClose}>
-          <a className={styles.phone} href="!#" target="_blank">
+          <a className={styles.phone} href="tel:+14077575376" target="_blank">
             <FontAwesomeIcon icon={faPhone} />
           </a>
-          <a className={styles.whatsapp} href="!#" target="_blank">
+          <a
+            className={styles.whatsapp}
+            href="https://api.whatsapp.com/send/?phone=14077575376"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faWhatsapp} />
           </a>
-          <a className={styles.email} href="!#" target="_blank">
+          <a
+            className={styles.email}
+            href="mailto:contact@vivevacationsoutlet.com"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </div>
