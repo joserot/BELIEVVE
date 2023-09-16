@@ -5,38 +5,38 @@ import Hotel from "../Hotel/Hotel";
 import { usePathname } from "next/navigation";
 
 interface Props {
-	destinations: Destination[];
+  destinations: Destination[];
 }
 
 export default function Content({ destinations }: Props) {
-	const pathname = usePathname();
-	const idDestination = parseInt(pathname.split("/destinations/")[1]);
-	const destination = destinations.find((d) => d.id === idDestination);
+  const pathname = usePathname();
+  const idDestination = pathname.split("/destinations/")[1];
+  const destination = destinations.find((d) => d.slug === idDestination);
 
-	if (!destination) return null;
+  if (!destination) return null;
 
-	return (
-		<article className={styles.content}>
-			{destination.hotels && destination.hotels.length ? (
-				destination.hotels.map((hotel, index) => {
-					const orientation = index % 2 === 0 ? "right" : "left";
-					return (
-						<Hotel
-							key={hotel.title}
-							title={hotel.title}
-							description={hotel.description}
-							longDescription={hotel.longDescription}
-							parking={hotel.parking}
-							images={hotel.images}
-							orientation={orientation}
-						/>
-					);
-				})
-			) : (
-				<div className={styles.noHotels}>
-					<p>No hotels found :(</p>
-				</div>
-			)}
-		</article>
-	);
+  return (
+    <article className={styles.content}>
+      {destination.hotels && destination.hotels.length ? (
+        destination.hotels.map((hotel, index) => {
+          const orientation = index % 2 === 0 ? "right" : "left";
+          return (
+            <Hotel
+              key={hotel.title}
+              title={hotel.title}
+              description={hotel.description}
+              longDescription={hotel.longDescription}
+              images={hotel.images}
+              orientation={orientation}
+              slug={hotel.slug}
+            />
+          );
+        })
+      ) : (
+        <div className={styles.noHotels}>
+          <p>No hotels found :(</p>
+        </div>
+      )}
+    </article>
+  );
 }

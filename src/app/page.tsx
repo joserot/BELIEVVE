@@ -11,43 +11,43 @@ import WhatsAppButton from "<src>/components/common/WhatsAppButton/WhatsAppButto
 import { client } from "<src>/lib/contentful";
 
 async function getData() {
-	const response = await client.getEntries({ content_type: "testimonials" });
+  const response = await client.getEntries({ content_type: "testimonials" });
 
-	return response;
+  return response;
 }
 
 export default async function Home() {
-	const testimonials = await getData();
+  const testimonials = await getData();
 
-	return (
-		<main
-			style={{
-				position: "relative",
-			}}
-		>
-			<Header />
-			<HeroHome />
-			<Information />
-			{destinations.map((destination, index) => {
-				const type = index % 2 === 0 ? "left" : "right";
-				return (
-					<Destination
-						key={destination.id}
-						name={destination.name}
-						description={destination.description}
-						imagePrimary={destination.imagePrimary}
-						imageSecondary={destination.imageSecondary}
-						imageTertiary={destination.imageTertiary}
-						id={destination.id}
-						hotels={destination.hotels}
-						type={type}
-					/>
-				);
-			})}
-			<About />
-			<Testimonials testimonials={testimonials.items} />
-			<WhatsAppButton />
-			<Footer />
-		</main>
-	);
+  return (
+    <main
+      style={{
+        position: "relative",
+      }}
+    >
+      <Header />
+      <HeroHome />
+      <Information />
+      {destinations.map((destination, index) => {
+        const type = index % 2 === 0 ? "left" : "right";
+        return (
+          <Destination
+            key={destination.slug}
+            name={destination.name}
+            description={destination.description}
+            imagePrimary={destination.imagePrimary}
+            imageSecondary={destination.imageSecondary}
+            imageTertiary={destination.imageTertiary}
+            slug={destination.slug}
+            hotels={destination.hotels}
+            type={type}
+          />
+        );
+      })}
+      <About />
+      <Testimonials testimonials={testimonials.items} />
+      <WhatsAppButton />
+      <Footer />
+    </main>
+  );
 }

@@ -4,23 +4,23 @@ import { usePathname } from "next/navigation";
 import styles from "./Hero.module.css";
 
 interface Props {
-	destinations: Destination[];
+  destinations: Destination[];
 }
 
 export default function Hero({ destinations }: Props) {
-	const pathname = usePathname();
-	const idDestination = parseInt(pathname.split("/destinations/")[1]);
-	const destination = destinations.find((d) => d.id === idDestination);
+  const pathname = usePathname();
+  const idDestination = pathname.split("/destinations/")[1];
+  const destination = destinations.find((d) => d.slug === idDestination);
 
-	if (!destination) return null;
+  if (!destination) return null;
 
-	return (
-		<article className={styles.hero}>
-			<div className={styles.heroContainer}>
-				<h1>{destination.name}</h1>
-				<h2>Resorts</h2>
-				{destination.longDescription && <p>{destination.longDescription}</p>}
-			</div>
-		</article>
-	);
+  return (
+    <article className={styles.hero}>
+      <div className={styles.heroContainer}>
+        <h1>{destination.name}</h1>
+        <h2>Resorts</h2>
+        {destination.longDescription && <p>{destination.longDescription}</p>}
+      </div>
+    </article>
+  );
 }

@@ -8,7 +8,7 @@ export default function DestinationCard({
   imagePrimary,
   imageSecondary,
   imageTertiary,
-  id,
+  slug,
   hotels,
 }: Destination) {
   const {
@@ -53,7 +53,7 @@ export default function DestinationCard({
           />
         </div>
       </div>
-      <Link className={link} href={`/destinations/${id}`}>
+      <Link className={link} href={`/destinations/${slug}`}>
         {name + " resorts"}
       </Link>
     </article>

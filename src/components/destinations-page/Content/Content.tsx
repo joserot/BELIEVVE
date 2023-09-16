@@ -14,18 +14,18 @@ export default function Content() {
             imagePrimary,
             imageSecondary,
             imageTertiary,
-            id,
+            slug,
             hotels,
           }) => {
             return (
               <DestinationCard
-                key={id}
+                key={slug}
                 name={name}
                 description={description}
                 imagePrimary={imagePrimary}
                 imageSecondary={imageSecondary}
                 imageTertiary={imageTertiary}
-                id={id}
+                slug={slug}
                 hotels={hotels}
               />
             );
