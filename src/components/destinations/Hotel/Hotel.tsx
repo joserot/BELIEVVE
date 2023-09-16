@@ -5,6 +5,8 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import "@splidejs/splide/css";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface orientation {
   orientation?: "left" | "right";
@@ -16,10 +18,13 @@ export default function Hotel({
   title,
   description,
   longDescription,
-  parking,
   images,
+  slug,
   orientation = "left",
 }: Props) {
+  const pathname = usePathname();
+  const destination = pathname.split("/destinations/")[1];
+
   return (
     <article className={styles.hotel}>
       <h2>{title}</h2>
@@ -92,7 +97,9 @@ export default function Hotel({
           <p>Fitness Facility (9 AM- 9 PM Daily)</p>
         </div>
       </section>
-      <button className={styles.moreInformation}>MORE INFORMATION</button>
+      <Link href={`/${destination}/${slug}`} className={styles.moreInformation}>
+        MORE INFORMATION
+      </Link>
     </article>
   );
 }

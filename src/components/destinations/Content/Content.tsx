@@ -22,7 +22,7 @@ export default function Content({ destinations }: Props) {
           const orientation = index % 2 === 0 ? "right" : "left";
           return (
             <Hotel
-              key={hotel.title}
+              key={hotel.slug}
               title={hotel.title}
               description={hotel.description}
               longDescription={hotel.longDescription}
