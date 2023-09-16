@@ -86,7 +86,68 @@ const destinations: Destination[] = [
     imageTertiary:
       "https://images.unsplash.com/photo-1583207884889-d79abf0d0aa3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80",
     slug: "las-vegas",
-    hotels: [],
+    hotels: [
+      {
+        title: "Experience Unforgettable Moments with Incredible Facilities.",
+        description:
+          "Welcome to our lakefront resort near theme parks. Enjoy our pirate-themed water park, pools, and dining options. Choose from cozy studios to spacious villas for families, the top choice for resort hotels in Orlando.",
+        longDescription:
+          "Welcome to our lakefront resort near theme parks. Enjoy our pirate-themed water park, pools, and dining options. Choose from cozy studios to spacious villas for families, the top choice for resort hotels in Orlando.",
+
+        images: [
+          "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80",
+          "https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        ],
+        slug: "las-vegas-resort-1",
+      },
+      {
+        title: "Resort with all amenities for a low Price!",
+        description:
+          "Our resort is close to Disney's Animal Kingdom Theme Park and other top attractions in Central Florida. Whether you want to be near the action or enjoy a peaceful retreat, we have you covered.",
+        longDescription:
+          "Welcome to our lakefront resort near theme parks. Enjoy our pirate-themed water park, pools, and dining options. Choose from cozy studios to spacious villas for families, the top choice for resort hotels in Orlando.",
+
+        images: [
+          "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80",
+          "https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        ],
+        slug: "las-vegas-resort-2",
+      },
+      {
+        title: "Experience Unforgettable Moments with Incredible Facilities.",
+        description:
+          "Welcome to our lakefront resort near theme parks. Enjoy our pirate-themed water park, pools, and dining options. Choose from cozy studios to spacious villas for families, the top choice for resort hotels in Orlando.",
+        longDescription:
+          "Welcome to our lakefront resort near theme parks. Enjoy our pirate-themed water park, pools, and dining options. Choose from cozy studios to spacious villas for families, the top choice for resort hotels in Orlando.",
+
+        images: [
+          "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80",
+          "https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        ],
+        slug: "las-vegas-resort-3",
+      },
+      {
+        title: "Experience Unforgettable Moments with Incredible Facilities.",
+        description:
+          "Welcome to our lakefront resort near theme parks. Enjoy our pirate-themed water park, pools, and dining options. Choose from cozy studios to spacious villas for families, the top choice for resort hotels in Orlando.",
+        longDescription:
+          "Welcome to our lakefront resort near theme parks. Enjoy our pirate-themed water park, pools, and dining options. Choose from cozy studios to spacious villas for families, the top choice for resort hotels in Orlando.",
+
+        images: [
+          "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80",
+          "https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        ],
+        slug: "las-vegas-resort-4",
+      },
+    ],
   },
   {
     name: "BRANSON",

@@ -83,7 +83,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px 0;
-    padding-bottom: 80px;
     position: relative;
   }
 
@@ -192,9 +191,8 @@
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 0;
-    padding-bottom: 80px;
     position: relative;
   }
 
@@ -304,9 +302,8 @@
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 0;
-    padding-bottom: 80px;
     position: relative;
   }
 
