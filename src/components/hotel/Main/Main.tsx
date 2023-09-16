@@ -1,41 +1,32 @@
 "use client";
 
-import styles from "./Hotel.module.css";
+import styles from "./Main.module.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import "@splidejs/splide/css";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface orientation {
-  orientation?: "left" | "right";
+interface Props {
+  destinations: Destination[];
 }
 
-type Props = Hotel & orientation;
-
-export default function Hotel({
-  title,
-  description,
-  longDescription,
-  images,
-  slug,
-  orientation = "left",
-}: Props) {
+export default function Main({ destinations }: Props) {
   const pathname = usePathname();
-  const destination = pathname.split("/destinations/")[1];
+  const paths = pathname.split("/");
+  const slugDestination = paths[paths.length - 2];
+  const slugHotel = paths[paths.length - 1];
+  const destination = destinations.find((d) => d.slug === slugDestination);
+  const hotel = destination?.hotels.find((h) => h.slug === slugHotel);
+  const { title, description, images } = hotel || {};
+
+  if (!hotel) return null;
 
   return (
     <article className={styles.hotel}>
       <h2>{title}</h2>
 
-      <section
-        className={
-          orientation === "right"
-            ? styles.hotelContainerRight
-            : styles.hotelContainerLeft
-        }
-      >
+      <section className={styles.hotelContainerRight}>
         {images && images.length ? (
           <div className={styles.hotelImages}>
             <Splide
@@ -97,12 +88,6 @@ export default function Hotel({
           <p>Fitness Facility (9 AM- 9 PM Daily)</p>
         </div>
       </section>
-      <Link
-        href={`/destinations/${destination}/${slug}`}
-        className={styles.moreInformation}
-      >
-        MORE INFORMATION
-      </Link>
     </article>
   );
 }
