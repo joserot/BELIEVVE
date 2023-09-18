@@ -6,7 +6,7 @@ export default function Hero() {
     <article className={styles.hero}>
       <Image
         className={styles.heroImage}
-        src="/img/destinations/hero.avif"
+        src="/img/destinations/hero-destination.png"
         alt="Hero image"
         width={1920}
         height={700}

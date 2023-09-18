@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8b3dff12;
+}
+
+.content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 100px 0;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  position: absolute;
+  left: 0;
+  top: -1rem;
+}
+
+.containerCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
