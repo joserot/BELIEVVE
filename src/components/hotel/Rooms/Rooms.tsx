@@ -4,6 +4,9 @@ import styles from "./Rooms.module.css";
 import RoomCard from "../RoomCard/RoomCard";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
+import useModal from "<src>/hooks/useModal";
+import Modal from "<src>/components/common/Modal/Modal";
+import ModalRoom from "../ModalRoom/ModalRoom";
 
 const roomsList = [
   {
@@ -44,12 +47,17 @@ const roomsList = [
 ];
 
 export default function Rooms() {
+  const [isOpen, openModal, closeModal] = useModal(false);
+
   if (!roomsList.length) return null;
 
   const { container, content, containerCards } = styles;
 
   return (
     <article className={container}>
+      <Modal isOpen={isOpen} closeModal={closeModal}>
+        <ModalRoom />
+      </Modal>
       <div className={content}>
         <h2>Rooms Options</h2>
         <section className={containerCards}>
@@ -63,7 +71,7 @@ export default function Rooms() {
               pauseOnHover: true,
               pauseOnFocus: true,
               resetProgress: true,
-              arrows: true,
+              arrows: false,
               pagination: false,
               paginationKeyboard: true,
               width: "90%",
@@ -92,6 +100,7 @@ export default function Rooms() {
                     text3={room.text3}
                     price1={room.price1}
                     price2={room.price2}
+                    openModal={openModal}
                   />
                 </SplideSlide>
               );

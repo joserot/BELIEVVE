@@ -1,0 +1,41 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000041;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.containerOpen {
+  display: flex;
+}
+
+.modal {
+  width: 90%;
+  max-width: 1000px;
+  background-color: #fff;
+  position: relative;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 2rem;
+}
+
+.content {
+  width: 100%;
+}

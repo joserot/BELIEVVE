@@ -14,6 +14,7 @@ interface Props {
   text3: string;
   price1: string;
   price2: string;
+  openModal: () => void;
 }
 
 export default function RoomCard({
@@ -25,6 +26,7 @@ export default function RoomCard({
   text3,
   price1,
   price2,
+  openModal,
 }: Props) {
   const { card, imageEl, titleEl, text, btnCta, price, reserve } = styles;
 
@@ -66,7 +68,7 @@ export default function RoomCard({
       <p className={text}>{text1}</p>
       <p className={text}>{text2}</p>
       <p className={text}>{text3}</p>
-      <button className={btnCta}>
+      <button onClick={openModal} className={btnCta}>
         More details <FontAwesomeIcon icon={faChevronRight} />
       </button>
       <h4 className={price}>{price1}</h4>
