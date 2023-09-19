@@ -1,0 +1,18 @@
+.content {
+  width: 100%;
+}
+
+.content h1 {
+  font-size: 2rem;
+  color: #02b6de;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}

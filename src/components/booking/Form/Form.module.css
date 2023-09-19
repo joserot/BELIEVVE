@@ -1,0 +1,120 @@
+.container {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #02b6de;
+  margin: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  color: #000;
+  font-size: 1rem;
+}
+
+.form input {
+  width: 100%;
+  background-color: #cedaf3;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+
+.form select {
+  width: 100%;
+  background-color: #cedaf3;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+
+.form option {
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.tripleInput {
+  display: flex;
+  gap: 10px;
+}
+
+.tripleInput label {
+  width: 33%;
+}
+
+.doubleInput {
+  display: flex;
+  gap: 10px;
+}
+
+.doubleInput label {
+  width: 50%;
+}
+
+.sent {
+  align-self: center;
+  color: #fff;
+  background-color: #02b6de;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin-top: 20px;
+}
+
+.sent:hover {
+  background-color: #8b3dff;
+}
+
+@media screen and (max-width: 700px) {
+  .tripleInput {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .doubleInput {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tripleInput label {
+    width: 100%;
+  }
+
+  .doubleInput label {
+    width: 100%;
+  }
+
+  .sent {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

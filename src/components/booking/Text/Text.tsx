@@ -1,6 +1,10 @@
+import styles from "./Text.module.css";
+
 export default function Text() {
+  const { content } = styles;
+
   return (
-    <article>
+    <article className={content}>
       <h1>Secure booking</h1>
       <p>Dear guest,</p>
       <p>

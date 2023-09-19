@@ -1,15 +1,20 @@
 import countries from "../../../../assets/countries";
 import languages from "../../../../assets/languages";
+import styles from "./Form.module.css";
 
 export default function Form() {
+  const { container, h2, form, doubleInput, tripleInput, sent } = styles;
+
   return (
-    <article>
-      <h2>Reservation and Check-in Details</h2>
-      <form>
-        <label>
-          Booking Date:
-          <input type="date" name="bookingDate" />
-        </label>
+    <article className={container}>
+      <h2 className={h2}>Reservation and Check-in Details</h2>
+      <form className={form}>
+        <div className={tripleInput}>
+          <label>
+            Booking Date:
+            <input type="date" name="bookingDate" />
+          </label>
+        </div>
         <label>
           Customer Name:
           <input type="text" name="customerName" />
@@ -18,7 +23,7 @@ export default function Form() {
           Spouse Name:
           <input type="text" name="spouseName" />
         </label>
-        <div>
+        <div className={tripleInput}>
           <label>
             Date of Birth:
             <input type="date" name="birthDate" />
@@ -40,7 +45,7 @@ export default function Form() {
           State, Zip Code:
           <input type="text" name="address" />
         </label>
-        <div>
+        <div className={tripleInput}>
           <label>
             Phone:
             <input type="tel" name="phone" />
@@ -62,7 +67,7 @@ export default function Form() {
             </select>
           </label>
         </div>
-        <div>
+        <div className={doubleInput}>
           <label>
             Major Credit Card TYPE: (Make sure it is a major credit card)
             <select name="creditCard">
@@ -81,7 +86,7 @@ export default function Form() {
             </select>
           </label>
         </div>
-        <div>
+        <div className={doubleInput}>
           <label>
             First language / What language do you both speak fluently?:
             <select name="language">
@@ -99,7 +104,7 @@ export default function Form() {
             <input type="text" name="ages" />
           </label>
         </div>
-        <div>
+        <div className={tripleInput}>
           <label>
             Customer Occupation:
             <input type="text" name="customerOccupation" />
@@ -113,7 +118,7 @@ export default function Form() {
             <input type="text" name="income" />
           </label>
         </div>
-        <div>
+        <div className={doubleInput}>
           <label>
             Email:
             <input type="email" name="email" />
@@ -123,7 +128,7 @@ export default function Form() {
             <input type="date" name="tourDate" />
           </label>
         </div>
-        <button>sent</button>
+        <button className={sent}>sent</button>
       </form>
     </article>
   );
