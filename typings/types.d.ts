@@ -1,11 +1,14 @@
-type type = "left" | "right";
-
 interface Hotel {
   title: string;
   description: string;
-  longDescription: string;
-  images: string[] | [];
+  images: string[];
   slug: string;
+  destination: string;
+  text1: string;
+  text2: string;
+  things1: string;
+  things2: string;
+  additional: string;
 }
 
 interface Destination {

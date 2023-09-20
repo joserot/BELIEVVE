@@ -19,7 +19,7 @@ export default function Hero({ destinations }: Props) {
       <div className={styles.heroContainer}>
         <h1>{destination.name}</h1>
         <h2>Resorts</h2>
-        {destination.longDescription && <p>{destination.longDescription}</p>}
+        {destination.description && <p>{destination.description}</p>}
       </div>
     </article>
   );

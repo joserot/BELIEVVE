@@ -6,7 +6,6 @@ import "@splidejs/react-splide/css/core";
 import "@splidejs/splide/css";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 interface orientation {
   orientation?: "left" | "right";
@@ -17,14 +16,16 @@ type Props = Hotel & orientation;
 export default function Hotel({
   title,
   description,
-  longDescription,
   images,
   slug,
+  text1,
+  text2,
+  things1,
+  things2,
+  additional,
+  destination,
   orientation = "left",
 }: Props) {
-  const pathname = usePathname();
-  const destination = pathname.split("/destinations/")[1];
-
   return (
     <article className={styles.hotel}>
       <h2>{title}</h2>
@@ -71,31 +72,14 @@ export default function Hotel({
         </div>
       </section>
       <section className={styles.shortInformation}>
-        <div className={styles.shortSection}>
-          <h3>PARKING</h3>
-          <p>Free Parking</p>
-          <h3>Neighborhood description</h3>
-          <p>2.7 mi to Disney&apos;s Animal KingDom</p>
-          <p>3.1 mil to Disney&apos;s Blizzard Beach Water Park</p>
-          <p>15.2 mil to Islands of Adventure</p>
-          <p>6.3 mi to the Disney World</p>
-          <p>6.1 mil to Magic KingDom</p>
-          <p>15.1 mi to Volcano Bay</p>
-        </div>
-        <div className={styles.shortSection}>
-          <h3>
-            When you stay at this resort you will have access to a wide range of
-            onsite amenities.
-          </h3>
-          <p>3 Heated Pools (9 AM- 11 PM Daily)</p>
-          <p>Outdoor Hot Tub (9 AM- 11 PM Daily)</p>
-          <p>Cabana Bar & Grill (9 AM- 11 PM Daily)</p>
-          <p>Onsite Dining (11 AM - 10 PM)</p>
-          <p>Mini Market Deli (7 AM- 10 PM Daily)( No Hot Food After 9 PM)</p>
-          <p>Gift Shop (9 AM- 10 PM Daily)</p>
-          <p>Sauna (9 AM- 9 PM Daily)</p>
-          <p>Fitness Facility (9 AM- 9 PM Daily)</p>
-        </div>
+        <div
+          dangerouslySetInnerHTML={{ __html: text1 }}
+          className={styles.shortSection}
+        ></div>
+        <div
+          dangerouslySetInnerHTML={{ __html: text2 }}
+          className={styles.shortSection}
+        ></div>
       </section>
       <Link
         href={`/destinations/${destination}/${slug}`}
