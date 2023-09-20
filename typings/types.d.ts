@@ -1,3 +1,18 @@
+interface Room {
+  name: string;
+  images: string[];
+  text1: string;
+  text2: string;
+  text3: string;
+  price1: string;
+  price2: string;
+  bedroom: string;
+  foodAndDrink: string;
+  entertainment: string;
+  bathroom: string;
+  resort: string;
+}
+
 interface Hotel {
   title: string;
   description: string;
