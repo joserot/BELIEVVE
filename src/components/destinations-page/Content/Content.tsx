@@ -1,13 +1,25 @@
 import destinations from "../../../../assets/destinations";
 import DestinationCard from "../DestinationCard/DestinationCard";
 import styles from "./Content.module.css";
+import { client } from "<src>/lib/contentful";
+import getDestinations from "<src>/models/destinations";
 
-export default function Content() {
+async function getData() {
+  const response = await client.getEntries({ content_type: "destination" });
+
+  return response;
+}
+
+export default async function Content() {
+  const response = await getData();
+
+  const destinationsData = await getDestinations(response);
+
   return (
     <article className={styles.content}>
       <h1>LOCATIONS</h1>
       <div className={styles.cardsContainer}>
-        {destinations.map(
+        {destinationsData.map(
           ({
             name,
             description,
@@ -15,7 +27,6 @@ export default function Content() {
             imageSecondary,
             imageTertiary,
             slug,
-            hotels,
           }) => {
             return (
               <DestinationCard
@@ -26,7 +37,6 @@ export default function Content() {
                 imageSecondary={imageSecondary}
                 imageTertiary={imageTertiary}
                 slug={slug}
-                hotels={hotels}
               />
             );
           }
