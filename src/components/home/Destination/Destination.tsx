@@ -2,6 +2,12 @@ import styles from "./Destination.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+interface orientation {
+  orientation: "left" | "right";
+}
+
+type Props = Destination & orientation;
+
 export default function Destination({
   name,
   description,
@@ -9,9 +15,8 @@ export default function Destination({
   imageSecondary,
   imageTertiary,
   slug,
-  hotels,
-  type = "right",
-}: Destination) {
+  orientation = "right",
+}: Props) {
   return (
     <article className={styles.destination}>
       <Image
@@ -23,7 +28,7 @@ export default function Destination({
       />
       <div
         className={
-          type === "right" ? styles.containerRight : styles.containerLeft
+          orientation === "right" ? styles.containerRight : styles.containerLeft
         }
       >
         <section className={styles.col1}>
@@ -37,7 +42,7 @@ export default function Destination({
             />
             <Image
               className={
-                type === "right" ? styles.image2Right : styles.image2Left
+                orientation === "right" ? styles.image2Right : styles.image2Left
               }
               src={imageTertiary}
               alt={name}

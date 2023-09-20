@@ -11,11 +11,14 @@ interface Hotel {
 interface Destination {
   name: string;
   description: string;
-  longDescription?: string;
   imagePrimary: string;
   imageSecondary: string;
   imageTertiary: string;
-  hotels: Hotel[] | [];
   slug: string;
-  type?: type;
+}
+
+interface Testimonial {
+  name: string;
+  testimonial: string;
+  profilePhoto: string;
 }
