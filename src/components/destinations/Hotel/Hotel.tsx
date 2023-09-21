@@ -14,7 +14,7 @@ interface orientation {
 type Props = Hotel & orientation;
 
 export default function Hotel({
-  title,
+  name,
   description,
   images,
   slug,
@@ -28,7 +28,7 @@ export default function Hotel({
 }: Props) {
   return (
     <article className={styles.hotel}>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
 
       <section
         className={

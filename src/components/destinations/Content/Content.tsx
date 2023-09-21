@@ -14,6 +14,8 @@ export default function Content({ hotels, destinations }: Props) {
   const idDestination = pathname.split("/destinations/")[1];
   const destination = destinations.find((d) => d.slug === idDestination);
 
+  console.log(hotels);
+
   if (!destination || !hotels) return null;
 
   const filterHotelsByDestination = hotels.filter((h: any) => {
@@ -28,7 +30,7 @@ export default function Content({ hotels, destinations }: Props) {
           return (
             <Hotel
               key={hotel.slug}
-              title={hotel.title}
+              name={hotel.name}
               description={hotel.description}
               images={hotel.images}
               orientation={orientation}

@@ -9,15 +9,16 @@ export default function getRooms(rooms: any): Room[] {
     return {
       name: r.fields.name,
       images: imagesArr,
-      text1: documentToHtmlString(r.fields.text1),
-      text2: documentToHtmlString(r.fields.text2),
-      text3: documentToHtmlString(r.fields.text2),
-      price1: documentToHtmlString(r.fields.price1),
-      price2: documentToHtmlString(r.fields.price2),
+      text1: r.fields.text1,
+      text2: r.fields.text2,
+      text3: r.fields.text2,
+      price1: r.fields.price1,
+      price2: r.fields.price2,
       bedroom: documentToHtmlString(r.fields.bedroom),
-      foodAndDrink: documentToHtmlString(r.fields.foodAndDrinks),
+      foodAndDrink: documentToHtmlString(r.fields.foodAndDrink),
       entertainment: documentToHtmlString(r.fields.entertainment),
       bathroom: documentToHtmlString(r.fields.bathroom),
+      more: documentToHtmlString(r.fields.more),
       resort: r.fields.resort,
     };
   });

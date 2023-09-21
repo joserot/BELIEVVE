@@ -12,7 +12,11 @@ const imagesList = [
   "/img/rooms/4.png",
 ];
 
-export default function ModalRoom() {
+interface Props {
+  room: Room;
+}
+
+export default function ModalRoom({ room }: Props) {
   const { container, h2, imageEl, h3, section, col, reserve } = styles;
 
   return (
@@ -37,7 +41,7 @@ export default function ModalRoom() {
         }}
         aria-label="Testimonials"
       >
-        {imagesList.map((image) => {
+        {room.images.map((image) => {
           return (
             <SplideSlide key={image}>
               <Image
@@ -51,65 +55,30 @@ export default function ModalRoom() {
           );
         })}
       </Splide>
-      <h3 className={h3}>2 bedroom</h3>
+      <h3 className={h3}>{room.name}</h3>
       <section className={section}>
         <div className={col}>
-          <p>98 sq m</p>
-          <p>Sleeps 6</p>
-          <p>1 King Bed, 1 Queen Sofa Bed and 1 Queen Bed</p>
+          <p>{room.text1}</p>
+          <p>{room.text2}</p>
+          <p>{room.text3}</p>
         </div>
       </section>
       <section className={section}>
         <div className={col}>
           <h4>ROOM AMENITIES</h4>
           <h5>Bedroom</h5>
-          <ul>
-            <li>Bed sheets</li>
-            <li>Ceiling fan</li>
-            <li>Climate-controlled air conditioning</li>
-            <li>Free cribs/infant beds</li>
-            <li>Pillowtop bed</li>
-            <li>Premium bedding</li>
-          </ul>
+          <div dangerouslySetInnerHTML={{ __html: room.bedroom }}></div>
 
           <h4>Food and drink</h4>
-          <ul>
-            <li>Bed sheets</li>
-            <li>Ceiling fan</li>
-            <li>Climate-controlled air conditioning</li>
-            <li>Free cribs/infant beds</li>
-            <li>Pillowtop bed</li>
-            <li>Premium bedding</li>
-          </ul>
+          <div dangerouslySetInnerHTML={{ __html: room.foodAndDrink }}></div>
           <h4>Entertainment</h4>
-          <ul>
-            <li>Bed sheets</li>
-            <li>Ceiling fan</li>
-            <li>Climate-controlled air conditioning</li>
-            <li>Free cribs/infant beds</li>
-            <li>Pillowtop bed</li>
-            <li>Premium bedding</li>
-          </ul>
+          <div dangerouslySetInnerHTML={{ __html: room.entertainment }}></div>
         </div>
         <div className={col}>
           <h4>Bathroom</h4>
-          <ul>
-            <li>Bed sheets</li>
-            <li>Ceiling fan</li>
-            <li>Climate-controlled air conditioning</li>
-            <li>Free cribs/infant beds</li>
-            <li>Pillowtop bed</li>
-            <li>Premium bedding</li>
-          </ul>
+          <div dangerouslySetInnerHTML={{ __html: room.bathroom }}></div>
           <h4>More</h4>
-          <ul>
-            <li>Bed sheets</li>
-            <li>Ceiling fan</li>
-            <li>Climate-controlled air conditioning</li>
-            <li>Free cribs/infant beds</li>
-            <li>Pillowtop bed</li>
-            <li>Premium bedding</li>
-          </ul>
+          <div dangerouslySetInnerHTML={{ __html: room.more }}></div>
         </div>
       </section>
       <button className={reserve}>Reserve</button>

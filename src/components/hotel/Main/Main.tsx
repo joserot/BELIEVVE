@@ -19,11 +19,11 @@ export default function Main({ resorts }: Props) {
 
   if (!hotel) return null;
 
-  const { title, description, images, text1, text2 } = hotel;
+  const { name, description, images, text1, text2 } = hotel;
 
   return (
     <article className={styles.hotel}>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
 
       <section className={styles.hotelContainerRight}>
         {images && images.length ? (

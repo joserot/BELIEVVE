@@ -30,7 +30,7 @@ export default async function HotelPage() {
     <main>
       <Header />
       <Main resorts={resortData} />
-      <Rooms />
+      <Rooms resorts={resortData} rooms={roomsData} />
       <Content resorts={resortData} />
       <WhatsAppButton />
       <Footer />

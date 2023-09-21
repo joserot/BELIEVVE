@@ -10,11 +10,12 @@ interface Room {
   foodAndDrink: string;
   entertainment: string;
   bathroom: string;
+  more: string;
   resort: string;
 }
 
 interface Hotel {
-  title: string;
+  name: string;
   description: string;
   images: string[];
   slug: string;
