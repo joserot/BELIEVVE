@@ -1,4 +1,3 @@
-import destinations from "../../../../assets/destinations";
 import DestinationCard from "../DestinationCard/DestinationCard";
 import styles from "./Content.module.css";
 import { client } from "<src>/lib/contentful";

@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 interface Props {
   images: string[];
@@ -81,7 +82,9 @@ export default function RoomCard({
       </button>
       <h4 className={price}>{price1}</h4>
       <h4 className={price}>{price2}</h4>
-      <button className={reserve}>Reserve</button>
+      <Link href={"/booking"} className={reserve}>
+        Reserve
+      </Link>
     </article>
   );
 }

@@ -4,13 +4,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import Image from "next/image";
 import styles from "./ModalRoom.module.css";
-
-const imagesList = [
-  "/img/rooms/1.png",
-  "/img/rooms/2.png",
-  "/img/rooms/3.jpeg",
-  "/img/rooms/4.png",
-];
+import Link from "next/link";
 
 interface Props {
   room: Room;
@@ -81,7 +75,9 @@ export default function ModalRoom({ room }: Props) {
           <div dangerouslySetInnerHTML={{ __html: room.more }}></div>
         </div>
       </section>
-      <button className={reserve}>Reserve</button>
+      <Link href={"/booking"} className={reserve}>
+        Reserve
+      </Link>
     </article>
   );
 }
