@@ -1,13 +1,14 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import Head from "next/head";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BELIEVVE",
+  title: "vivevacationsoutlet",
   description: "BELIEVVE LIVVE & LOVVE IT, We make it possible",
-  icons: ["/img/logo-2.png"],
+  icons: ["/logo-2.png"],
 };
 
 export default function RootLayout({
@@ -17,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/logo-2.png" sizes="any" />
+      </Head>
       <body className={montserrat.className}>{children}</body>
     </html>
   );

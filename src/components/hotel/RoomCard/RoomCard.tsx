@@ -82,7 +82,7 @@ export default function RoomCard({
       </button>
       <h4 className={price}>{price1}</h4>
       <h4 className={price}>{price2}</h4>
-      <Link href={`/booking?id=${room.id}`} className={reserve}>
+      <Link href={`/booking?room=${room.slug}`} className={reserve}>
         Reserve
       </Link>
     </article>

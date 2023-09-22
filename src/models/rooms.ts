@@ -1,5 +1,4 @@
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { v4 as uuidv4 } from "uuid";
 
 export default function getRooms(rooms: any): Room[] {
   return rooms.items.map((r: any) => {
@@ -21,7 +20,7 @@ export default function getRooms(rooms: any): Room[] {
       bathroom: documentToHtmlString(r.fields.bathroom),
       more: documentToHtmlString(r.fields.more),
       resort: r.fields.resort,
-      id: uuidv4(),
+      slug: r.fields.slug,
     };
   });
 }

@@ -12,7 +12,7 @@ interface Room {
   bathroom: string;
   more: string;
   resort: string;
-  id: string;
+  slug: string;
 }
 
 interface Hotel {

@@ -75,7 +75,7 @@ export default function ModalRoom({ room }: Props) {
           <div dangerouslySetInnerHTML={{ __html: room.more }}></div>
         </div>
       </section>
-      <Link href={`/booking?id=${room.id}`} className={reserve}>
+      <Link href={`/booking?room=${room.slug}`} className={reserve}>
         Reserve
       </Link>
     </article>

@@ -1,23 +1,19 @@
 "use client";
 
-import WhatsAppIcon from "../icons/WhatsApp";
-import { useState } from "react";
-import Message from "./Message/Message";
-import styles from "./WhatsAppButton.module.css";
+import { useEffect } from "react";
 
 export default function WhatsAppButton() {
-	const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://embed.tawk.to/650d9d70b1aaa13b7a785612/1hauiu077";
+    script.async = true;
+    script.setAttribute("crossorigin", "*");
+    document.body.appendChild(script);
 
-	const handleClick = () => {
-		setIsOpen(!isOpen);
-	};
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
-	return (
-		<article className={styles.container}>
-			{isOpen && <Message />}
-			<button className={styles.button} onClick={handleClick}>
-				<WhatsAppIcon />
-			</button>
-		</article>
-	);
+  return <></>;
 }
