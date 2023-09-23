@@ -1,28 +1,34 @@
 import Image from "next/image";
 import styles from "./Card.module.css";
 
-export default function Card() {
+interface Props {
+  room: any;
+  checkIn: any;
+  checkOut: any;
+  guests: any;
+}
+
+export default function Card({ room, checkIn, checkOut, guests }: Props) {
   const { card, image } = styles;
 
   return (
     <article className={card}>
       <Image
         className={image}
-        src={"/img/rooms/1.png"}
-        width={300}
-        height={300}
+        src={room.images[0]}
+        width={250}
+        height={250}
         alt="resort"
       />
-      <h3>2 bedroom, 1 King Bed and 1 Queen Sofa Bed</h3>
+      <h3>{room.name}</h3>
       <p>
-        <strong>Check in:</strong> 09/07/23
+        <strong>Check in:</strong> {checkIn}
       </p>
       <p>
-        <strong>Check out:</strong> 09/11/23
+        <strong>Check out:</strong> {checkOut}
       </p>
-      <p>3 nights stay</p>
       <p>
-        <strong>Guest:</strong> 4
+        <strong>Guest:</strong> {guests}
       </p>
     </article>
   );

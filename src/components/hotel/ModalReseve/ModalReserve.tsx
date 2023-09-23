@@ -35,16 +35,16 @@ export default function ModalReserve({ room }: Props) {
         <div className={doubleInput}>
           <label>
             Check-in:
-            <input type="date" name="checkIn" />
+            <input type="date" name="checkIn" required />
           </label>
           <label>
             Check-out:
-            <input type="date" name="checkOut" />
+            <input type="date" name="checkOut" required />
           </label>
         </div>
         <label>
           Guests:
-          <select name="guests">
+          <select name="guests" required>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

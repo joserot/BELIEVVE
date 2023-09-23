@@ -21,7 +21,7 @@ export default async function Booking() {
   return (
     <>
       <Header />
-      <Content />
+      <Content rooms={roomsData} />
       <WhatsAppButton />
       <Footer />
     </>

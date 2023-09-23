@@ -2,39 +2,71 @@ import countries from "../../../../assets/countries";
 import languages from "../../../../assets/languages";
 import styles from "./Form.module.css";
 
-export default function Form() {
+interface Props {
+  room: any;
+  checkIn: any;
+  checkOut: any;
+  guests: any;
+}
+
+export default function Form({ room, checkIn, checkOut, guests }: Props) {
   const { container, h2, form, doubleInput, tripleInput, sent } = styles;
+
+  const handlerSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const target: any = e.target;
+
+    const customerName = target.customerName.value;
+    const spouseName = target.spouseName.value;
+    const birthDate = target.birthDate.value;
+    const spouseBirthDate = target.spouseBirthDate.value;
+    const pets = target.pets.value;
+    const address = target.address.value;
+    const phone = target.phone.value;
+    const identification = target.identification.value;
+    const country = target.country.value;
+    const creditCard = target.creditCard.value;
+    const maritalStatus = target.maritalStatus.value;
+    const language = target.language.value;
+    const ages = target.ages.value;
+    const customerOccupation = target.customerOccupation.value;
+    const spouseOccupation = target.spouseOccupation.value;
+    const income = target.income.value;
+    const email = target.email.value;
+    const tourDate = target.value;
+  };
 
   return (
     <article className={container}>
       <h2 className={h2}>Reservation and Check-in Details</h2>
       <form className={form}>
-        <div className={tripleInput}>
+        {/* <div className={tripleInput}>
           <label>
             Booking Date:
             <input type="date" name="bookingDate" />
           </label>
-        </div>
+        </div> */}
         <label>
           Customer Name:
-          <input type="text" name="customerName" />
+          <input type="text" name="customerName" required />
         </label>
         <label>
           Spouse Name:
-          <input type="text" name="spouseName" />
+          <input type="text" name="spouseName" required />
         </label>
         <div className={tripleInput}>
           <label>
             Date of Birth:
-            <input type="date" name="birthDate" />
+            <input type="date" name="birthDate" required />
           </label>
           <label>
             Spouse Date of Birth:
-            <input type="date" name="spouseBirthDate" />
+            <input type="date" name="spouseBirthDate" required />
           </label>
           <label>
             Pets:
-            <select name="pets">
+            <select name="pets" required>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
@@ -43,20 +75,20 @@ export default function Form() {
         <label>
           Address: (Matching address of the couple&apos;s ID): Address, City,
           State, Zip Code:
-          <input type="text" name="address" />
+          <input type="text" name="address" required />
         </label>
         <div className={tripleInput}>
           <label>
             Phone:
-            <input type="tel" name="phone" />
+            <input type="tel" name="phone" required />
           </label>
           <label>
             Identification for check-in:
-            <input type="text" name="phone" />
+            <input type="text" name="identification" required />
           </label>
           <label>
             Foreign Passport
-            <select name="country">
+            <select name="country" defaultValue="United States" required>
               {countries.map((country) => {
                 return (
                   <option value={country} key={country}>
@@ -70,14 +102,14 @@ export default function Form() {
         <div className={doubleInput}>
           <label>
             Major Credit Card TYPE: (Make sure it is a major credit card)
-            <select name="creditCard">
+            <select name="creditCard" required>
               <option value="visa">Visa</option>
               <option value="mastercard">MasterCard</option>
             </select>
           </label>
           <label>
             Marital Status:
-            <select name="maritalStatus">
+            <select name="maritalStatus" required>
               <option value="single">Single</option>
               <option value="married">Married</option>
               <option value="widowed">Widowed</option>
@@ -89,7 +121,7 @@ export default function Form() {
         <div className={doubleInput}>
           <label>
             First language / What language do you both speak fluently?:
-            <select name="language">
+            <select name="language" defaultValue="English" required>
               {languages.map((language) => {
                 return (
                   <option value={language} key={language}>
@@ -101,31 +133,31 @@ export default function Form() {
           </label>
           <label>
             Ages:
-            <input type="text" name="ages" />
+            <input type="text" name="ages" required />
           </label>
         </div>
         <div className={tripleInput}>
           <label>
             Customer Occupation:
-            <input type="text" name="customerOccupation" />
+            <input type="text" name="customerOccupation" required />
           </label>
           <label>
             Spouse Occupation:
-            <input type="text" name="spouseOccupation" />
+            <input type="text" name="spouseOccupation" required />
           </label>
           <label>
             Combined Yearly Income:
-            <input type="text" name="income" />
+            <input type="text" name="income" required />
           </label>
         </div>
         <div className={doubleInput}>
           <label>
             Email:
-            <input type="email" name="email" />
+            <input type="email" name="email" required />
           </label>
           <label>
             Preferred tour date:
-            <input type="date" name="tourDate" />
+            <input type="date" name="tourDate" required />
           </label>
         </div>
         <button className={sent}>sent</button>
