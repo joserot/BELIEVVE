@@ -1,6 +1,7 @@
 import countries from "../../../../assets/countries";
 import languages from "../../../../assets/languages";
 import styles from "./Form.module.css";
+import sendEmail from "<src>/functions/sendEmail";
 
 interface Props {
   room: any;
@@ -12,7 +13,7 @@ interface Props {
 export default function Form({ room, checkIn, checkOut, guests }: Props) {
   const { container, h2, form, doubleInput, tripleInput, sent } = styles;
 
-  const handlerSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
+  const handlerSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const target: any = e.target;
@@ -35,12 +36,39 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
     const income = target.income.value;
     const email = target.email.value;
     const tourDate = target.value;
+    const roomName = room.name;
+    const resortName = room.resort.fields.name;
+
+    const response = await sendEmail(
+      customerName,
+      spouseName,
+      birthDate,
+      spouseBirthDate,
+      pets,
+      address,
+      phone,
+      identification,
+      country,
+      creditCard,
+      maritalStatus,
+      language,
+      ages,
+      customerOccupation,
+      spouseOccupation,
+      income,
+      email,
+      tourDate,
+      roomName,
+      resortName
+    );
+
+    console.log(response);
   };
 
   return (
     <article className={container}>
       <h2 className={h2}>Reservation and Check-in Details</h2>
-      <form className={form}>
+      <form onSubmit={handlerSubmit} className={form}>
         {/* <div className={tripleInput}>
           <label>
             Booking Date:
