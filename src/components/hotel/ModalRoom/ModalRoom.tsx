@@ -8,9 +8,15 @@ import Link from "next/link";
 
 interface Props {
   room: Room;
+  openModalReserve: () => void;
+  closeModal: () => void;
 }
 
-export default function ModalRoom({ room }: Props) {
+export default function ModalRoom({
+  room,
+  openModalReserve,
+  closeModal,
+}: Props) {
   const { container, h2, imageEl, h3, section, col, reserve } = styles;
 
   return (
@@ -75,9 +81,15 @@ export default function ModalRoom({ room }: Props) {
           <div dangerouslySetInnerHTML={{ __html: room.more }}></div>
         </div>
       </section>
-      <Link href={`/booking?room=${room.slug}`} className={reserve}>
+      <button
+        onClick={() => {
+          closeModal();
+          openModalReserve();
+        }}
+        className={reserve}
+      >
         Reserve
-      </Link>
+      </button>
     </article>
   );
 }

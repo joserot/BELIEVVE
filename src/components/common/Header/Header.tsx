@@ -14,101 +14,101 @@ import NavBar from "./NavBar/NavBar";
 import Image from "next/image";
 
 const links = [
-	{
-		href: "/",
-		label: "Home",
-	},
-	{
-		href: "/destinations",
-		label: "Destinations",
-	},
-	{
-		href: "/contact-us",
-		label: "Contact Us",
-	},
+  {
+    href: "/",
+    label: "Home",
+  },
+  {
+    href: "/destinations",
+    label: "Destinations",
+  },
+  {
+    href: "/contact-us",
+    label: "Contact Us",
+  },
 ];
 
 const socialLinks = [
-	{
-		href: "https://www.facebook.com/vvoutlet.travelnow",
-		label: "Facebook",
-		icon: <FacebookIcon />,
-	},
-	{
-		href: "https://www.instagram.com/vvoutlet.travelnow/",
-		label: "Instagram",
-		icon: <InstagramIcon />,
-	},
-	{
-		href: "https://www.tiktok.com/@vvoutlet.travelnow",
-		label: "TikTok",
-		icon: <TikTokIcon />,
-	},
-	{
-		href: "https://www.airbnb.com/users/show/58007933",
-		label: "Airbnb",
-		icon: <AirbnbIcon />,
-	},
-	{
-		href: "https://api.whatsapp.com/send/?phone=14077575376",
-		label: "WhatsApp",
-		icon: <WhatsAppIcon />,
-	},
+  {
+    href: "https://www.facebook.com/vvoutlet.travelnow",
+    label: "Facebook",
+    icon: <FacebookIcon />,
+  },
+  {
+    href: "https://www.instagram.com/vvoutlet.travelnow/",
+    label: "Instagram",
+    icon: <InstagramIcon />,
+  },
+  {
+    href: "https://www.tiktok.com/@vvoutlet.travelnow",
+    label: "TikTok",
+    icon: <TikTokIcon />,
+  },
+  {
+    href: "https://www.airbnb.com/users/show/58007933",
+    label: "Airbnb",
+    icon: <AirbnbIcon />,
+  },
+  {
+    href: "https://api.whatsapp.com/send/?phone=14077575376",
+    label: "WhatsApp",
+    icon: <WhatsAppIcon />,
+  },
 ];
 
 export default function Header() {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const handleMenuClick = (event: React.SyntheticEvent<HTMLButtonElement>) => {
-		event.preventDefault();
+  const handleMenuClick = (event: React.SyntheticEvent<HTMLButtonElement>) => {
+    event.preventDefault();
 
-		setIsMenuOpen(!isMenuOpen);
-	};
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-	return (
-		<header className={styles.header}>
-			<div className={styles.headerContainer}>
-				<Link className={styles.logo} href="/">
-					<Image src="/img/logo.png" alt="logo" width={150} height={50} />
-				</Link>
-				<nav className={styles.navbar}>
-					{links.map(({ href, label }) => {
-						return (
-							<Link key={label} href={href}>
-								{label}
-							</Link>
-						);
-					})}
-				</nav>
-				<div className={styles.socialLinks}>
-					{socialLinks.map(({ href, icon }) => {
-						return (
-							<a
-								className={styles.social}
-								key={href}
-								href={href}
-								target="_blank"
-							>
-								{icon}
-							</a>
-						);
-					})}
-					<a href="tel:+14077575376" target="_blank" className={styles.phone}>
-						+14077575376
-					</a>
-				</div>
-				<button onClick={handleMenuClick} className={styles.burgerMenu}>
-					<FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
-				</button>
-			</div>
-			{isMenuOpen && (
-				<NavBar
-					links={links}
-					socialLinks={socialLinks}
-					handleMenuClick={handleMenuClick}
-					isMenuOpen={isMenuOpen}
-				/>
-			)}
-		</header>
-	);
+  return (
+    <header className={styles.header}>
+      <div className={styles.headerContainer}>
+        <Link className={styles.logo} href="/">
+          <Image src="/img/logo.png" alt="logo" width={150} height={50} />
+        </Link>
+        <nav className={styles.navbar}>
+          {links.map(({ href, label }) => {
+            return (
+              <Link key={label} href={href}>
+                {label}
+              </Link>
+            );
+          })}
+        </nav>
+        <div className={styles.socialLinks}>
+          {socialLinks.map(({ href, icon }) => {
+            return (
+              <a
+                className={styles.social}
+                key={href}
+                href={href}
+                target="_blank"
+              >
+                {icon}
+              </a>
+            );
+          })}
+          <a href="tel:+14077575376" target="_blank" className={styles.phone}>
+            +14077575376
+          </a>
+        </div>
+        <button onClick={handleMenuClick} className={styles.burgerMenu}>
+          <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
+        </button>
+      </div>
+      {isMenuOpen && (
+        <NavBar
+          links={links}
+          socialLinks={socialLinks}
+          handleMenuClick={handleMenuClick}
+          isMenuOpen={isMenuOpen}
+        />
+      )}
+    </header>
+  );
 }

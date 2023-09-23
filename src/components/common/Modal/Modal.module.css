@@ -20,7 +20,7 @@
   max-width: 1000px;
   background-color: #fff;
   position: relative;
-  height: 90vh;
+  max-height: 90vh;
   overflow-y: auto;
 }
 

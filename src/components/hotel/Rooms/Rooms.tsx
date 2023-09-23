@@ -5,6 +5,7 @@ import RoomCard from "../RoomCard/RoomCard";
 import useModal from "<src>/hooks/useModal";
 import Modal from "<src>/components/common/Modal/Modal";
 import ModalRoom from "../ModalRoom/ModalRoom";
+import ModalReserve from "../ModalReseve/ModalReserve";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -17,6 +18,7 @@ export default function Rooms({ resorts, rooms }: Props) {
   const [roomFoModal, setRoomForModal] = useState<Room>(rooms[0]);
 
   const [isOpen, openModal, closeModal] = useModal(false);
+  const [isOpenReserve, openModalReserve, closeModalReserve] = useModal(false);
 
   const pathname = usePathname();
   const paths = pathname.split("/");
@@ -36,7 +38,14 @@ export default function Rooms({ resorts, rooms }: Props) {
   return (
     <article className={container}>
       <Modal isOpen={isOpen} closeModal={closeModal}>
-        <ModalRoom room={roomFoModal} />
+        <ModalRoom
+          room={roomFoModal}
+          openModalReserve={openModalReserve}
+          closeModal={closeModal}
+        />
+      </Modal>
+      <Modal isOpen={isOpenReserve} closeModal={closeModalReserve}>
+        <ModalReserve room={roomFoModal} />
       </Modal>
       <div className={content}>
         <h2>Rooms Options</h2>
@@ -55,6 +64,7 @@ export default function Rooms({ resorts, rooms }: Props) {
                 room={room}
                 openModal={openModal}
                 setRoomForModal={setRoomForModal}
+                openModalReserve={openModalReserve}
               />
             );
           })}

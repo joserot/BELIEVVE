@@ -17,6 +17,7 @@ interface Props {
   room: Room;
   openModal: () => void;
   setRoomForModal: (room: Room) => void;
+  openModalReserve: () => void;
 }
 
 export default function RoomCard({
@@ -30,6 +31,7 @@ export default function RoomCard({
   room,
   openModal,
   setRoomForModal,
+  openModalReserve,
 }: Props) {
   const { card, imageEl, titleEl, text, btnCta, price, reserve } = styles;
 
@@ -82,9 +84,9 @@ export default function RoomCard({
       </button>
       <h4 className={price}>{price1}</h4>
       <h4 className={price}>{price2}</h4>
-      <Link href={`/booking?room=${room.slug}`} className={reserve}>
+      <button onClick={openModalReserve} className={reserve}>
         Reserve
-      </Link>
+      </button>
     </article>
   );
 }
