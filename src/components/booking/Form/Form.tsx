@@ -1,7 +1,11 @@
+"use client";
+
 import countries from "../../../../assets/countries";
 import languages from "../../../../assets/languages";
 import styles from "./Form.module.css";
 import sendEmail from "<src>/functions/sendEmail";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface Props {
   room: any;
@@ -13,7 +17,13 @@ interface Props {
 export default function Form({ room, checkIn, checkOut, guests }: Props) {
   const { container, h2, form, doubleInput, tripleInput, sent } = styles;
 
+  const [isLoading, setIsLoading] = useState(false);
+
+  const router = useRouter();
+
   const handlerSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+    setIsLoading(true);
+
     e.preventDefault();
 
     const target: any = e.target;
@@ -62,19 +72,17 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
       resortName
     );
 
-    console.log(response);
+    if (response.message === "success") {
+      router.push("/success");
+    }
+
+    setIsLoading(false);
   };
 
   return (
     <article className={container}>
       <h2 className={h2}>Reservation and Check-in Details</h2>
       <form onSubmit={handlerSubmit} className={form}>
-        {/* <div className={tripleInput}>
-          <label>
-            Booking Date:
-            <input type="date" name="bookingDate" />
-          </label>
-        </div> */}
         <label>
           Customer Name:
           <input type="text" name="customerName" required />
@@ -188,7 +196,7 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
             <input type="date" name="tourDate" required />
           </label>
         </div>
-        <button className={sent}>sent</button>
+        <button className={sent}>{isLoading ? "sending..." : "send"}</button>
       </form>
     </article>
   );

@@ -1,0 +1,39 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 80vh;
+}
+
+.h1 {
+  font-size: 2rem;
+  color: #02b6de;
+  margin: 0;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  text-wrap: text-balance;
+  max-width: 600px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #8b3dff;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #4e57ff;
+}
