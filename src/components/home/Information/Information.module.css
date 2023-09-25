@@ -1,40 +1,39 @@
 .information {
-	width: 90%;
-	max-width: 1200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin: 0 auto;
-	padding: 30px 0;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
 .information h2 {
-	color: #04d1f7;
-	font-size: 3rem;
-	font-weight: 700;
-	margin-bottom: 20px;
-	text-align: center;
+  color: #04d1f7;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .information p {
-	text-wrap: balance;
-	text-align: center;
-	font-size: 1.5rem;
-	color: #000;
-	text-transform: uppercase;
+  text-wrap: balance;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #000;
 }
 
 @media screen and (max-width: 700px) {
-	.information {
-		padding: 30px 0;
-	}
+  .information {
+    padding: 30px 0;
+  }
 
-	.information h2 {
-		font-size: 2rem;
-	}
+  .information h2 {
+    font-size: 2rem;
+  }
 
-	.information p {
-		font-size: 1rem;
-	}
+  .information p {
+    font-size: 1rem;
+  }
 }
