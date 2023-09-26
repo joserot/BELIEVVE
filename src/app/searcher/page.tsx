@@ -6,6 +6,7 @@ import { client } from "<src>/lib/contentful";
 import getDestinations from "<src>/models/destinations";
 import getResorts from "<src>/models/resorts";
 import getRooms from "<src>/models/rooms";
+import Content from "<src>/components/searcher/Content/Content";
 
 async function getData() {
   const response = await Promise.all([
@@ -32,6 +33,11 @@ export default async function Home() {
     >
       <Header />
       <SearcherInput destinations={destinationsData} />
+      <Content
+        destinations={destinationsData}
+        resorts={resortsData}
+        rooms={roomsData}
+      />
       <WhatsAppButton />
       <Footer />
     </main>

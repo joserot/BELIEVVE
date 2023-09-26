@@ -1,0 +1,143 @@
+.card {
+  width: 90%;
+  background-color: #fff;
+  padding: 20px;
+
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.col1 {
+  height: 300px;
+  width: 400px;
+}
+
+.col1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.col2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.btnCta {
+  background-color: transparent;
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  color: #02b6de;
+  font-size: 1.3rem;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnCta:hover {
+  gap: 30px;
+  color: #8b3dff;
+}
+
+.btnResort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  background-color: #02b6de;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-decoration: none;
+}
+
+.btnResort:hover {
+  background-color: #8b3dff;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .h2 {
+    font-size: 1rem;
+  }
+
+  .col1 {
+    height: 200px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .btnCta {
+    font-size: 1rem;
+  }
+
+  .btnResort {
+    position: static;
+    align-self: flex-end;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+}
