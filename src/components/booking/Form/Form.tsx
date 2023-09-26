@@ -6,6 +6,9 @@ import styles from "./Form.module.css";
 import sendEmail from "<src>/functions/sendEmail";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Modal from "<src>/components/common/Modal/Modal";
+import ModalInfo from "../ModalInfo/ModalInfo";
+import useModal from "<src>/hooks/useModal";
 
 interface Props {
   room: any;
@@ -15,11 +18,14 @@ interface Props {
 }
 
 export default function Form({ room, checkIn, checkOut, guests }: Props) {
-  const { container, h2, form, doubleInput, tripleInput, sent } = styles;
+  const { container, h2, form, doubleInput, tripleInput, sent, btnInfo } =
+    styles;
 
   const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
+
+  const [isOpen, openModal, closeModal] = useModal(false);
 
   const handlerSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     setIsLoading(true);
@@ -47,7 +53,7 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
     const email = target.email.value;
     const tourDate = target.value;
     const roomName = room.name;
-    const resortName = room.resort.fields.name;
+    const resortName = room.resort.fields.secretName;
 
     const response = await sendEmail(
       customerName,
@@ -69,7 +75,10 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
       email,
       tourDate,
       roomName,
-      resortName
+      resortName,
+      checkIn,
+      checkOut,
+      guests
     );
 
     if (response.message === "success") {
@@ -81,6 +90,9 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
 
   return (
     <article className={container}>
+      <Modal isOpen={isOpen} closeModal={closeModal}>
+        <ModalInfo />
+      </Modal>
       <h2 className={h2}>Reservation and Check-in Details</h2>
       <form onSubmit={handlerSubmit} className={form}>
         <label>
@@ -173,17 +185,50 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
           </label>
         </div>
         <div className={tripleInput}>
-          <label>
-            Customer Occupation:
-            <input type="text" name="customerOccupation" required />
+          <label title="This field is optional">
+            <span>
+              Customer Occupation:{" "}
+              <button
+                className={btnInfo}
+                onClick={(e) => {
+                  e.preventDefault();
+                  openModal();
+                }}
+              >
+                (?)
+              </button>
+            </span>
+            <input type="text" name="customerOccupation" />
           </label>
-          <label>
-            Spouse Occupation:
-            <input type="text" name="spouseOccupation" required />
+          <label title="This field is optional">
+            <span>
+              Spouse Occupation:{" "}
+              <button
+                className={btnInfo}
+                onClick={(e) => {
+                  e.preventDefault();
+                  openModal();
+                }}
+              >
+                (?)
+              </button>
+            </span>
+            <input type="text" name="spouseOccupation" />
           </label>
-          <label>
-            Combined Yearly Income:
-            <input type="text" name="income" required />
+          <label title="This field is optional">
+            <span>
+              Combined Yearly Income:{" "}
+              <button
+                className={btnInfo}
+                onClick={(e) => {
+                  e.preventDefault();
+                  openModal();
+                }}
+              >
+                (?)
+              </button>
+            </span>
+            <input type="text" name="income" />
           </label>
         </div>
         <div className={doubleInput}>

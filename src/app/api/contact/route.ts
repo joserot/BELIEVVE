@@ -22,6 +22,9 @@ const CONTACT_MESSAGE_FIELDS: any = {
   income: "Combined Yearly Income",
   email: "Email",
   tourDate: "Preferred tour date",
+  checkIn: "Check in",
+  checkOut: "Check out",
+  guests: "Guests",
 };
 
 const generateEmailContent = (data: any) => {

@@ -1,0 +1,12 @@
+.modal {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal p {
+  font-weight: 600;
+  text-align: center;
+  text-wrap: text-balance;
+}

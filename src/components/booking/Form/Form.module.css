@@ -64,6 +64,7 @@
 
 .tripleInput label {
   width: 33%;
+  position: relative;
 }
 
 .doubleInput {
@@ -74,6 +75,24 @@
 
 .doubleInput label {
   width: 50%;
+}
+
+.btnInfo {
+  color: #fff;
+  background-color: #02b6de;
+  text-transform: uppercase;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: inherit;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.btnInfo:hover {
+  background-color: #8b3dff;
 }
 
 .sent {

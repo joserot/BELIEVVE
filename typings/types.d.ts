@@ -18,6 +18,7 @@ interface Room {
   more: string;
   resort: string;
   slug: string;
+  guests: number;
 }
 
 interface Hotel {
@@ -31,6 +32,7 @@ interface Hotel {
   things1: string;
   things2: string;
   additional: string;
+  secretName: string;
 }
 
 interface Destination {

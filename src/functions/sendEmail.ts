@@ -20,7 +20,10 @@ export default async function sendEmail(
   email: string,
   tourDate: string,
   roomName: string,
-  resortName: string
+  resortName: string,
+  checkIn: string,
+  checkOut: string,
+  guests: string
 ) {
   try {
     const response = await axios.post("/api/contact", {
@@ -44,6 +47,9 @@ export default async function sendEmail(
       tourDate,
       roomName,
       resortName,
+      checkIn,
+      checkOut,
+      guests,
     });
 
     if (response.status === 200) {

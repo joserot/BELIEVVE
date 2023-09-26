@@ -21,6 +21,7 @@ export default function getRooms(rooms: any): Room[] {
       more: documentToHtmlString(r.fields.more),
       resort: r.fields.resort,
       slug: r.fields.slug,
+      guests: r.fields.guests,
     };
   });
 }

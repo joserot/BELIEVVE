@@ -17,6 +17,7 @@ export default function getResorts(resorts: any): Hotel[] {
       things1: documentToHtmlString(r.fields.things1),
       things2: documentToHtmlString(r.fields.things2),
       additional: documentToHtmlString(r.fields.additional),
+      secretName: r.fields.secretName,
     };
   });
 }
