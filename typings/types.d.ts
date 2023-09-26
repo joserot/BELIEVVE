@@ -1,3 +1,8 @@
+interface About {
+  text1: string;
+  text2: string;
+}
+
 interface Room {
   name: string;
   images: string[];

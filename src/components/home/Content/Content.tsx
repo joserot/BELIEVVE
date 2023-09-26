@@ -8,8 +8,6 @@ interface Props {
 }
 
 export default function Content({ destinations }: Props) {
-  console.log(destinations);
-
   return destinations.map((destination, index) => {
     const type = index % 2 === 0 ? "left" : "right";
     return (
