@@ -17,7 +17,7 @@ interface Props {
 import styles from "./Content.module.css";
 
 export default function Content({ destinations, resorts, rooms }: Props) {
-  const { container, roomsEl, h2 } = styles;
+  const { container, roomsEl, h2, withOutResults } = styles;
 
   const [roomFoModal, setRoomForModal] = useState<Room>(rooms[0]);
 
@@ -30,6 +30,26 @@ export default function Content({ destinations, resorts, rooms }: Props) {
   const guestsSlug = searchParams.get("guests");
 
   if (!destinationSlug || !guestsSlug) return null;
+
+  // encontrar hoteles en ese destino
+
+  const resortsInThisDestination = resorts.filter((r: any) => {
+    return r.destination.fields.name === destinationSlug;
+  });
+
+  // encontrar rooms en esos hoteles
+
+  const roomsInThisResorts = rooms.filter((room: any) => {
+    return resortsInThisDestination.some((resort) => {
+      return room.resort.fields.name === resort.name;
+    });
+  });
+
+  // filtrar por la cantidad de guests
+
+  const filterRooms = roomsInThisResorts.filter((r: any) => {
+    return parseInt(r.guests) >= parseInt(guestsSlug);
+  });
 
   return (
     <article className={container}>
@@ -45,10 +65,10 @@ export default function Content({ destinations, resorts, rooms }: Props) {
       </Modal>
       {destinationSlug && <h1>{destinationSlug}</h1>}
       <div>
-        {rooms && rooms.length ? (
+        {filterRooms && filterRooms.length ? (
           <div className={roomsEl}>
             <h2 className={h2}>Rooms Options</h2>
-            {rooms.map((r) => {
+            {filterRooms.map((r) => {
               return (
                 <Card
                   openModal={openModal}
@@ -61,7 +81,7 @@ export default function Content({ destinations, resorts, rooms }: Props) {
             })}
           </div>
         ) : (
-          <p>without results</p>
+          <p className={withOutResults}>without results</p>
         )}
       </div>
     </article>

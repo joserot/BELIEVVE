@@ -37,3 +37,7 @@
   left: 0;
   top: -1rem;
 }
+
+.withOutResults {
+  text-align: center;
+}
