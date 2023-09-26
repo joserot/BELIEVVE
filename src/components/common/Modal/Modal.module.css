@@ -5,14 +5,15 @@
   position: fixed;
   left: 0;
   top: 0;
-  display: none;
   justify-content: center;
   align-items: center;
   z-index: 99999;
+  transform: translateY(300%);
 }
 
 .containerOpen {
   display: flex;
+  transform: translateY(0);
 }
 
 .modal {
@@ -22,6 +23,12 @@
   position: relative;
   max-height: 90vh;
   overflow-y: auto;
+  transform: translateY(600%);
+  transition: transform 0.5s;
+}
+
+.modalOpen {
+  transform: translateY(0);
 }
 
 .button {

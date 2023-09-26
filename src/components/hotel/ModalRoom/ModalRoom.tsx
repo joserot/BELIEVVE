@@ -16,7 +16,7 @@ export default function ModalRoom({
   openModalReserve,
   closeModal,
 }: Props) {
-  const { container, h2, imageEl, h3, section, col, reserve } = styles;
+  const { container, h2, imageEl, h3, section, col, reserve, footer } = styles;
 
   return (
     <article className={container}>
@@ -82,15 +82,17 @@ export default function ModalRoom({
           <div dangerouslySetInnerHTML={{ __html: room.more }}></div>
         </div>
       </section>
-      <button
-        onClick={() => {
-          closeModal();
-          openModalReserve();
-        }}
-        className={reserve}
-      >
-        Reserve
-      </button>
+      <footer className={footer}>
+        <button
+          onClick={() => {
+            closeModal();
+            openModalReserve();
+          }}
+          className={reserve}
+        >
+          Reserve
+        </button>
+      </footer>
     </article>
   );
 }

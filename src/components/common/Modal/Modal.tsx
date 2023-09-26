@@ -9,11 +9,20 @@ interface Props {
 }
 
 export default function Modal({ children, isOpen, closeModal }: Props) {
-  const { container, containerOpen, modal, button, content } = styles;
+  const { container, containerOpen, modal, modalOpen, button, content } =
+    styles;
 
   return (
-    <article className={`${container} ${isOpen && containerOpen}`}>
-      <div className={modal}>
+    <article
+      onClick={closeModal}
+      className={`${container} ${isOpen && containerOpen}`}
+    >
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+        className={`${modal} ${isOpen && modalOpen}`}
+      >
         <button className={button} onClick={closeModal}>
           <FontAwesomeIcon icon={faXmark} />
         </button>
