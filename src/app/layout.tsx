@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
+import { FiltersProvider } from "<src>/context/filtersContext";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/logo-2.png" sizes="any" />
       </Head>
-      <body className={montserrat.className}>{children}</body>
+      <FiltersProvider>
+        <body className={montserrat.className}>{children}</body>
+      </FiltersProvider>
     </html>
   );
 }

@@ -1,0 +1,82 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.form label {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  color: #000;
+  font-size: 1rem;
+}
+
+.form select {
+  width: 100%;
+  background-color: #cedaf3;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+
+.form option {
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.search {
+  width: 33%;
+  align-self: center;
+  color: #fff;
+  background-color: #02b6de;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin-top: 20px;
+}
+
+.search:hover {
+  background-color: #8b3dff;
+}
+
+@media screen and (max-width: 700px) {
+  .form {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .form label {
+    width: 45%;
+  }
+
+  .search {
+    width: 100%;
+  }
+}

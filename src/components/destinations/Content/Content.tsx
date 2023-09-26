@@ -41,6 +41,7 @@ export default function Content({ hotels, destinations }: Props) {
               things2={hotel.things2}
               additional={hotel.additional}
               destination={destination.slug}
+              secretName={hotel.secretName}
             />
           );
         })
