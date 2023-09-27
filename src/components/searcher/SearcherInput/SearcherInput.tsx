@@ -50,7 +50,7 @@ export default function SearcherInput({ destinations }: Props) {
           </select>
         </label>
         <label>
-          Travels
+          Guests
           <select
             onChange={(e) => {
               setGuests(e.target.value);
