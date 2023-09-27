@@ -3,7 +3,11 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 export default function getResorts(resorts: any): Hotel[] {
   return resorts.items.map((r: any) => {
     const imagesArr = r.fields.images.map((image: any) => {
-      return "https:" + image.fields.file.url;
+      if (image.fields) {
+        return "https:" + image.fields.file.url;
+      } else {
+        return [];
+      }
     });
 
     return {
