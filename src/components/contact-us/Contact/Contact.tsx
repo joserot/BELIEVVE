@@ -33,7 +33,7 @@ export default function Contact() {
           </a>
           <a
             className={styles.email}
-            href="mailto:contact@vivevacationsoutlet.com"
+            href="mailto:vvoreservations6@gmail.com"
             target="_blank"
           >
             <FontAwesomeIcon icon={faEnvelope} />
