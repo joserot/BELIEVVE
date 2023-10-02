@@ -5,8 +5,6 @@ export default function getResorts(resorts: any): Hotel[] {
     const imagesArr = r.fields.images.map((image: any) => {
       if (image.fields) {
         return "https:" + image.fields.file.url;
-      } else {
-        return [];
       }
     });
 
