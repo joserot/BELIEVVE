@@ -11,7 +11,7 @@ export default function HeroHome() {
         height={700}
         className={styles.heroImage}
       />
-      <h1>BELIEVVE LIVVE & LOVVE IT! </h1>
+      <h1>BELIEVVE, LIVVE & LOVVE IT! </h1>
       <h2>We make it possible</h2>
     </article>
   );
