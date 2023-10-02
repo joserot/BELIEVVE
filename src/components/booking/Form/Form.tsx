@@ -40,9 +40,13 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
     const spouseBirthDate = target.spouseBirthDate.value;
     const pets = target.pets.value;
     const address = target.address.value;
+    const city = target.city.value;
+    const state = target.state.value;
+    const postal = target.postal.value;
+    const country = target.country.value;
     const phone = target.phone.value;
     const identification = target.identification.value;
-    const country = target.country.value;
+    const foreignPassport = target.foreignPassport.value;
     const creditCard = target.creditCard.value;
     const maritalStatus = target.maritalStatus.value;
     const language = target.language.value;
@@ -62,6 +66,10 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
       spouseBirthDate,
       pets,
       address,
+      city,
+      state,
+      postal,
+      foreignPassport,
       phone,
       identification,
       country,
@@ -120,11 +128,43 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
             </select>
           </label>
         </div>
-        <label>
+        {/* <label>
           Address: (Matching address of the couple&apos;s ID): Address, City,
           State, Zip Code:
           <input type="text" name="address" required />
-        </label>
+        </label> */}
+        <div className={tripleInput}>
+          <label>
+            Adress:
+            <input type="tel" name="address" required />
+          </label>
+          <label>
+            City:
+            <input type="text" name="city" required />
+          </label>
+          <label>
+            State:
+            <input type="text" name="state" required />
+          </label>
+        </div>
+        <div className={doubleInput}>
+          <label>
+            Postal:
+            <input type="tel" name="postal" required />
+          </label>
+          <label>
+            Country:
+            <select name="country" defaultValue="United States" required>
+              {countries.map((country) => {
+                return (
+                  <option value={country} key={country}>
+                    {country}
+                  </option>
+                );
+              })}
+            </select>
+          </label>
+        </div>
         <div className={tripleInput}>
           <label>
             Phone:
@@ -136,7 +176,11 @@ export default function Form({ room, checkIn, checkOut, guests }: Props) {
           </label>
           <label>
             Foreign Passport
-            <select name="country" defaultValue="United States" required>
+            <select
+              name="foreignPassport"
+              defaultValue="United States"
+              required
+            >
               {countries.map((country) => {
                 return (
                   <option value={country} key={country}>
