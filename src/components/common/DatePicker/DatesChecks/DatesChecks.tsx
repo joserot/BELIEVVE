@@ -2,7 +2,7 @@
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import styles from "./DatePicker.module.css";
+import styles from "./DatesChecks.module.css";
 
 interface Props {
   startDate: string;
@@ -41,7 +41,7 @@ function getMaxDate(startDate: string, dates: string[]): Date {
   }
 }
 
-export default function InputDate({
+export default function DatesChecks({
   startDate,
   setStartDate,
   endDate,

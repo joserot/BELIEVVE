@@ -2,7 +2,7 @@
 
 import styles from "./ModalReserve.module.css";
 import { useRouter } from "next/navigation";
-import DatePicker from "<src>/components/common/DatePicker/DatePicker";
+import DatesChecks from "<src>/components/common/DatePicker/DatesChecks/DatesChecks";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -65,7 +65,7 @@ export default function ModalReserve({ room, destinationName }: Props) {
     <article className={container}>
       <h2 className={h2}>Request to book</h2>
       <form onSubmit={handlerSubmit} className={form}>
-        <DatePicker
+        <DatesChecks
           startDate={startDate}
           setStartDate={setStartDate}
           endDate={endDate}

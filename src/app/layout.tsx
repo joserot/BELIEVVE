@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { FiltersProvider } from "<src>/context/filtersContext";
+import NextTopLoader from "nextjs-toploader";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -23,7 +24,10 @@ export default function RootLayout({
         <link rel="icon" href="/logo-2.png" sizes="any" />
       </Head>
       <FiltersProvider>
-        <body className={montserrat.className}>{children}</body>
+        <body className={montserrat.className}>
+          <NextTopLoader color="#04d1f7" height={4} />
+          {children}
+        </body>
       </FiltersProvider>
     </html>
   );
