@@ -1,38 +1,38 @@
 {
-	"name": "believve",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"@contentful/rich-text-html-renderer": "^16.1.2",
-		"@contentful/rich-text-react-renderer": "^15.17.2",
-		"@contentful/rich-text-types": "^16.0.3",
-		"@fortawesome/fontawesome-svg-core": "^6.4.2",
-		"@fortawesome/free-brands-svg-icons": "^6.4.2",
-		"@fortawesome/free-regular-svg-icons": "^6.4.2",
-		"@fortawesome/free-solid-svg-icons": "^6.4.2",
-		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@splidejs/react-splide": "^0.7.12",
-		"@types/node": "20.5.1",
-		"@types/react": "18.2.20",
-		"@types/react-dom": "18.2.7",
-		"axios": "^1.5.0",
-		"contentful": "^10.5.2",
-		"eslint": "8.47.0",
-		"eslint-config-next": "13.4.19",
-		"next": "13.4.19",
-		"nodemailer": "^6.9.5",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"typescript": "5.1.6"
-	},
-	"devDependencies": {
-		"@types/nodemailer": "^6.4.10",
-		"@types/uuid": "^9.0.4"
-	}
+  "name": "believve",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.1.2",
+    "@contentful/rich-text-react-renderer": "^15.17.2",
+    "@contentful/rich-text-types": "^16.0.3",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@splidejs/react-splide": "^0.7.12",
+    "@types/node": "20.5.1",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "axios": "^1.5.0",
+    "contentful": "^10.5.2",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "nodemailer": "^6.9.5",
+    "react": "18.2.0",
+    "react-datepicker": "^4.18.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.10"
+  }
 }

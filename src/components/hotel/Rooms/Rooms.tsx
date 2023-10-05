@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default function Rooms({ resorts, rooms }: Props) {
-  const [roomFoModal, setRoomForModal] = useState<Room>(rooms[0]);
+  const [roomForModal, setRoomForModal] = useState<Room>(rooms[0]);
 
   const [isOpen, openModal, closeModal] = useModal(false);
   const [isOpenReserve, openModalReserve, closeModalReserve] = useModal(false);
@@ -24,6 +24,9 @@ export default function Rooms({ resorts, rooms }: Props) {
   const paths = pathname.split("/");
   const slugHotel = paths[paths.length - 1];
   const hotel = resorts.find((h) => h.slug === slugHotel);
+
+  const destination: any = hotel?.destination;
+  const destinationName = destination.fields.name;
 
   const roomsOfHotel = rooms.filter((r: any) => {
     const resortName = r.resort.fields.name;
@@ -39,14 +42,16 @@ export default function Rooms({ resorts, rooms }: Props) {
     <article className={container}>
       <Modal isOpen={isOpen} closeModal={closeModal}>
         <ModalRoom
-          room={roomFoModal}
+          room={roomForModal}
           openModalReserve={openModalReserve}
           closeModal={closeModal}
         />
       </Modal>
+
       <Modal isOpen={isOpenReserve} closeModal={closeModalReserve}>
-        <ModalReserve room={roomFoModal} />
+        <ModalReserve room={roomForModal} destinationName={destinationName} />
       </Modal>
+
       <div className={content}>
         <h2>Rooms Options</h2>
         <section className={containerCards}>

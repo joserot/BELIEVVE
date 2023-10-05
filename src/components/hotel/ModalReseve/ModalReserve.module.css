@@ -2,6 +2,7 @@
   width: 100%;
   padding: 30px;
   position: relative;
+  min-height: 400px;
 }
 
 .h2 {

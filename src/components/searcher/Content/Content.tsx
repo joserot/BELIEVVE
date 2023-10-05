@@ -7,14 +7,13 @@ import Modal from "<src>/components/common/Modal/Modal";
 import ModalRoom from "<src>/components/hotel/ModalRoom/ModalRoom";
 import useModal from "<src>/hooks/useModal";
 import ModalReserve from "<src>/components/hotel/ModalReseve/ModalReserve";
+import styles from "./Content.module.css";
 
 interface Props {
   destinations: Destination[];
   resorts: Hotel[];
   rooms: Room[];
 }
-
-import styles from "./Content.module.css";
 
 export default function Content({ destinations, resorts, rooms }: Props) {
   const { container, roomsEl, h2, withOutResults } = styles;
@@ -30,6 +29,17 @@ export default function Content({ destinations, resorts, rooms }: Props) {
   const guestsSlug = searchParams.get("guests");
 
   if (!destinationSlug || !guestsSlug) return null;
+
+  const thisDestination: any = destinations.find((d: any) => {
+    const slug = destinationSlug.toLowerCase();
+    const dName = d.name.toLowerCase();
+
+    return slug === dName;
+  });
+
+  const destinationName = thisDestination.name;
+
+  // const destinationName = destination.name;
 
   // encontrar hoteles en ese destino
 
@@ -61,7 +71,7 @@ export default function Content({ destinations, resorts, rooms }: Props) {
         />
       </Modal>
       <Modal isOpen={isOpenReserve} closeModal={closeModalReserve}>
-        <ModalReserve room={roomFoModal} />
+        <ModalReserve room={roomFoModal} destinationName={destinationName} />
       </Modal>
       {destinationSlug && <h1>{destinationSlug}</h1>}
       <div>
