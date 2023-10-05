@@ -9,6 +9,7 @@ interface Props {
   setStartDate: (date: string) => void;
   endDate: string;
   setEndDate: (date: string) => void;
+  dates: string[];
 }
 
 export default function InputDate({
@@ -16,8 +17,13 @@ export default function InputDate({
   setStartDate,
   endDate,
   setEndDate,
+  dates,
 }: Props) {
   const { container } = styles;
+
+  const datesFormat = dates.map((d) => {
+    return new Date(d);
+  });
 
   return (
     <div className={container}>
@@ -31,6 +37,7 @@ export default function InputDate({
           onChange={(date: string) => setStartDate(date)}
           startDate={startDate}
           minDate={new Date()}
+          includeDates={datesFormat}
         />
       </label>
       <label>
@@ -44,6 +51,7 @@ export default function InputDate({
           endDate={endDate}
           startDate={startDate}
           minDate={startDate}
+          includeDates={datesFormat}
         />
       </label>
     </div>

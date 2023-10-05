@@ -26,7 +26,7 @@ export default function Rooms({ resorts, rooms }: Props) {
   const hotel = resorts.find((h) => h.slug === slugHotel);
 
   const destination: any = hotel?.destination;
-  const destinationName = destination.fields.name;
+  const destinationName = destination.fields.nameExcel;
 
   const roomsOfHotel = rooms.filter((r: any) => {
     const resortName = r.resort.fields.name;

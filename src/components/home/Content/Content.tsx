@@ -1,6 +1,5 @@
 "use client";
 
-import { log } from "console";
 import Destination from "../Destination/Destination";
 
 interface Props {
@@ -10,6 +9,7 @@ interface Props {
 export default function Content({ destinations }: Props) {
   return destinations.map((destination, index) => {
     const type = index % 2 === 0 ? "left" : "right";
+
     return (
       <Destination
         key={destination.slug}
@@ -20,6 +20,7 @@ export default function Content({ destinations }: Props) {
         imageTertiary={destination.imageTertiary}
         slug={destination.slug}
         orientation={type}
+        nameExcel={destination.nameExcel}
       />
     );
   });

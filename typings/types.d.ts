@@ -42,6 +42,7 @@ interface Destination {
   imageSecondary: string;
   imageTertiary: string;
   slug: string;
+  nameExcel: string;
 }
 
 interface Testimonial {

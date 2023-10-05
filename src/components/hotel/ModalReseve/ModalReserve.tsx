@@ -3,7 +3,8 @@
 import styles from "./ModalReserve.module.css";
 import { useRouter } from "next/navigation";
 import DatePicker from "<src>/components/common/DatePicker/DatePicker";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 interface Props {
   room: Room;
@@ -13,6 +14,7 @@ interface Props {
 export default function ModalReserve({ room, destinationName }: Props) {
   const [startDate, setStartDate] = useState<string>("");
   const [endDate, setEndDate] = useState<string>("");
+  const [dates, setDates] = useState([]);
 
   const hotel: any = room.resort;
   const hotelName = hotel.fields.secretName;
@@ -30,14 +32,34 @@ export default function ModalReserve({ room, destinationName }: Props) {
     const checkOut = new Date(endDate).toLocaleDateString();
     const guests = target.guests.value;
 
-    if (!checkIn || !checkOut.length || !guests) return;
+    if (checkIn === "Invalid Date" || checkOut === "Invalid Date" || !guests)
+      return;
 
     router.push(
       `/booking?room=${room.slug}&in=${checkIn}&out=${checkOut}&guests=${guests}`
     );
   };
 
-  console.log(destinationName);
+  useEffect(() => {
+    getDates();
+  }, [room, destinationName]);
+
+  const getDates = async () => {
+    try {
+      const res = await axios.get(
+        `https://vive.vacations.outlet.vvoutlet.net/api/consultDataResortDisponibility?destination=${destinationName}&resort=${hotelName}&unit_type_sm=${room.name}`
+      );
+
+      if (res.status === 200) {
+        setDates(res.data.date_list);
+
+        return;
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+    }
+  };
 
   return (
     <article className={container}>
@@ -48,6 +70,7 @@ export default function ModalReserve({ room, destinationName }: Props) {
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
+          dates={dates}
         />
         <label>
           Guests:

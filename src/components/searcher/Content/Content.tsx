@@ -37,9 +37,7 @@ export default function Content({ destinations, resorts, rooms }: Props) {
     return slug === dName;
   });
 
-  const destinationName = thisDestination.name;
-
-  // const destinationName = destination.name;
+  const destinationName = thisDestination.nameExcel;
 
   // encontrar hoteles en ese destino
 
