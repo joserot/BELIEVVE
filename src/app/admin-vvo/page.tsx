@@ -47,6 +47,7 @@ export default function PageAdmin() {
       }
     } catch (error) {
       console.log(error);
+      alert("Error uploading");
     } finally {
       setIsLoading(false);
     }
