@@ -30,7 +30,7 @@ export default function PageAdmin() {
 
     try {
       const res = await axios.post(
-        "https://vive.vacations.outlet.vvoutlet.net/api/updateDataResortDisponibility",
+        "https://backend.vvo.vvoutlet.net/api/updateDataResortDisponibility",
         formData,
         {
           headers: {

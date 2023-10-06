@@ -47,7 +47,7 @@ export default function ModalReserve({ room, destinationName }: Props) {
   const getDates = async () => {
     try {
       const res = await axios.get(
-        `https://vive.vacations.outlet.vvoutlet.net/api/consultDataResortDisponibility?destination=${destinationName}&resort=${hotelName}&unit_type_sm=${room.name}`
+        `https://backend.vvo.vvoutlet.net/api/consultDataResortDisponibility?destination=${destinationName}&resort=${hotelName}&unit_type_sm=${room.name}`
       );
 
       if (res.status === 200) {
