@@ -9,36 +9,6 @@ interface Props {
   setStartDate: (date: string) => void;
   endDate: string;
   setEndDate: (date: string) => void;
-  dates: string[];
-}
-
-function getMaxDate(startDate: string, dates: string[]): Date {
-  // Ordenar las fechas y convertirlas a Date objects
-  const sortedDates = dates
-    .sort((a, b) => new Date(a).getTime() - new Date(b).getTime())
-    .map((date) => new Date(date));
-
-  // Encontrar la primera fecha no disponible después de startDate
-  const unavailableDate = sortedDates.find((date, i, arr) => {
-    // Asegurarse de que nextDate está definida
-    const nextDate = arr[i + 1]
-      ? arr[i + 1]
-      : new Date(Number.MAX_SAFE_INTEGER);
-    return (
-      date.getTime() > new Date(startDate).getTime() &&
-      nextDate.getTime() - date.getTime() > 86400000
-    );
-  });
-
-  // Si encontramos una fecha no disponible, la fecha máxima será un día antes
-  // De lo contrario, la fecha máxima será la última fecha disponible
-  if (unavailableDate) {
-    unavailableDate.setDate(unavailableDate.getDate());
-
-    return unavailableDate;
-  } else {
-    return sortedDates[sortedDates.length - 1];
-  }
 }
 
 export default function DatesChecks({
@@ -46,15 +16,8 @@ export default function DatesChecks({
   setStartDate,
   endDate,
   setEndDate,
-  dates,
 }: Props) {
   const { container } = styles;
-
-  const datesFormat = dates.map((d) => {
-    return new Date(d);
-  });
-
-  const maxDate = getMaxDate(startDate, dates);
 
   return (
     <div className={container}>
@@ -70,7 +33,7 @@ export default function DatesChecks({
           }}
           startDate={startDate}
           minDate={new Date()}
-          includeDates={datesFormat}
+          placeholderText="Choose Check in Date"
         />
       </label>
       <label>
@@ -82,9 +45,15 @@ export default function DatesChecks({
           onChange={(date: string) => setEndDate(date)}
           endDate={endDate}
           startDate={startDate}
-          minDate={startDate}
-          maxDate={maxDate}
-          includeDates={datesFormat}
+          minDate={
+            startDate &&
+            new Date(startDate).setDate(new Date(startDate).getDate() + 2)
+          }
+          maxDate={
+            startDate &&
+            new Date(startDate).setDate(new Date(startDate).getDate() + 8)
+          }
+          placeholderText="Choose check out date"
         />
       </label>
     </div>

@@ -3,8 +3,7 @@
 import styles from "./ModalReserve.module.css";
 import { useRouter } from "next/navigation";
 import DatesChecks from "<src>/components/common/DatePicker/DatesChecks/DatesChecks";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 interface Props {
   room: Room;
@@ -14,7 +13,6 @@ interface Props {
 export default function ModalReserve({ room, destinationName }: Props) {
   const [startDate, setStartDate] = useState<string>("");
   const [endDate, setEndDate] = useState<string>("");
-  const [dates, setDates] = useState([]);
 
   const hotel: any = room.resort;
   const hotelName = hotel.fields.secretName;
@@ -40,27 +38,6 @@ export default function ModalReserve({ room, destinationName }: Props) {
     );
   };
 
-  useEffect(() => {
-    getDates();
-  }, [room, destinationName]);
-
-  const getDates = async () => {
-    try {
-      const res = await axios.get(
-        `https://backend.vvo.vvoutlet.net/api/consultDataResortDisponibility?destination=${destinationName}&resort=${hotelName}&unit_type_sm=${room.name}`
-      );
-
-      if (res.status === 200) {
-        setDates(res.data.date_list);
-
-        return;
-      }
-    } catch (error) {
-      console.log(error);
-    } finally {
-    }
-  };
-
   return (
     <article className={container}>
       <h2 className={h2}>Request to book</h2>
@@ -70,7 +47,6 @@ export default function ModalReserve({ room, destinationName }: Props) {
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
-          dates={dates}
         />
         <label>
           Guests:

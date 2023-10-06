@@ -26,7 +26,6 @@ export default async function Content() {
             imageSecondary,
             imageTertiary,
             slug,
-            nameExcel,
           }) => {
             return (
               <DestinationCard
@@ -37,7 +36,6 @@ export default async function Content() {
                 imageSecondary={imageSecondary}
                 imageTertiary={imageTertiary}
                 slug={slug}
-                nameExcel={nameExcel}
               />
             );
           }

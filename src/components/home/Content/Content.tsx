@@ -20,7 +20,6 @@ export default function Content({ destinations }: Props) {
         imageTertiary={destination.imageTertiary}
         slug={destination.slug}
         orientation={type}
-        nameExcel={destination.nameExcel}
       />
     );
   });
