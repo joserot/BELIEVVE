@@ -47,8 +47,8 @@ export default function Main({ resorts }: Props) {
                       className={styles.image}
                       src={image}
                       alt={"Hotel"}
-                      width={300}
-                      height={300}
+                      width={700}
+                      height={600}
                     />
                   </SplideSlide>
                 );
