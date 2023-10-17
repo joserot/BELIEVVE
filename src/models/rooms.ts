@@ -11,7 +11,7 @@ export default function getRooms(rooms: any): Room[] {
       images: imagesArr,
       text1: r.fields.text1,
       text2: r.fields.text2,
-      text3: r.fields.text2,
+      text3: r.fields.text3,
       price1: r.fields.price1,
       price2: r.fields.price2,
       bedroom: documentToHtmlString(r.fields.bedroom),
