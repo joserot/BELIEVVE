@@ -26,8 +26,12 @@ export default function ModalReserve({ room, destinationName }: Props) {
 
     const target: any = e.target;
 
-    const checkIn = new Date(startDate).toLocaleDateString();
-    const checkOut = new Date(endDate).toLocaleDateString();
+    const checkIn = new Date(startDate)
+      .toLocaleDateString()
+      .replaceAll("/", "-");
+    const checkOut = new Date(endDate)
+      .toLocaleDateString()
+      .replaceAll("/", "-");
     const guests = target.guests.value;
 
     if (checkIn === "Invalid Date" || checkOut === "Invalid Date" || !guests)
