@@ -93,8 +93,8 @@ export default function Header() {
               </a>
             );
           })}
-          <a href="tel:+14077575376" target="_blank" className={styles.phone}>
-            +14077575376
+          <a href="tel:+1321-398-5631" target="_blank" className={styles.phone}>
+            +1 321-398-5631
           </a>
         </div>
         <button onClick={handleMenuClick} className={styles.burgerMenu}>
